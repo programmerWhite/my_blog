@@ -1,0 +1,72 @@
+.homeContainerDiv{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-color: #434e5c;
+    border-top:1px solid #434e5c;
+}
+.myDesc{
+    font-size: 40px;
+    text-align: center;
+    padding: 120px 0;
+    color: #434e5c;
+}
+.myName{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    font-family: 微软雅黑;
+}
+.myName span{
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menuContainerDiv{
+    display:flex;
+    height: 40px;
+    line-height: 40px;
+    justify-content: center;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.menuText{
+    padding:0 40px;
+    cursor: pointer;
+}
+.menuText a{
+    text-decoration: none;
+    color: white;
+}
+.menuText a:hover{
+    color: #fd4733;
+}
+.myPhoto{
+    height: 220px;
+    width: 220px;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 0 !important;
+    position: relative;
+    margin-top: -80px;
+}
+.myPhoto img{
+    height: inherit;
+    width: inherit;
+}
+.menuLeftPart{
+    width: 50%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.menuRightPart{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+}

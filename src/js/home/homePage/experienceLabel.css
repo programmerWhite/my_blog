@@ -1,0 +1,23 @@
+.myExperienceLabelOne{
+    width: 320px;
+    height: 80px;
+    position: relative;
+    padding:20px 40px;
+}
+.experienceLabelTriangle{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid #434e5c;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    left: 0px;
+}
+.experienceLabelTitle{
+    font-size: 20px;
+    color: #434e5c;
+}
+.experienceLabelDate{
+    font-size: 14px;
+    line-height: 30px;
+}

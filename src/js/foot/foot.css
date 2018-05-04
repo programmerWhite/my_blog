@@ -1,0 +1,24 @@
+.foot-div{
+    height: 160px;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #434e5c;
+}
+.foot-inner-div{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px 0;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+.foot-part{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+.foot-part p{
+    line-height: 40px;
+}

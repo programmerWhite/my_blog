@@ -1,0 +1,21 @@
+.myBlogContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin:0 auto;
+    padding: 40px 0;
+}
+.myBlogTitle{
+    text-align: center;
+    margin: 80px 0;
+}
+.myBlogTitle h2{
+    font-size: 40px;
+}
+.myBlogTitle h2 sub{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.myBlogTitle p{
+    font-size: 16px;
+    margin:20px 0;
+}

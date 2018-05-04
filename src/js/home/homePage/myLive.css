@@ -1,0 +1,106 @@
+.my-live-div{
+    width: 100%;
+    max-width: 1024px;
+    margin: 60px auto;
+}
+.my-live-head-div{
+    text-align: center;
+}
+.my-live-head-div h2{
+    font-size: 40px ;
+}
+
+.my-live-head-div h2 sub{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.my-live-photo-div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.photo-one-div{
+    width: 25%;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+.photo-one-div:hover .hover-shade-div{
+    display: flex;
+}
+.my-live-head-div p{
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.photo-one-div img{
+    max-height: inherit;
+    width: 100%;
+}
+.hover-shade-div{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.hover-shade-div span{
+    color: white;
+    font-size: 50px;
+}
+.shade-bg-div{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    left: 0px;
+    top: 0px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-img-div{
+    height: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.big-img-inner-div{
+    width: 600px;
+    min-height: 600px;
+}
+.big-img-inner-div img{
+    width: 100%;
+}
+.right-arrow-div,
+.left-arrow-div{
+    color: white;
+    font-size: 60px;
+}
+.right-arrow-div:hover,
+.left-arrow-div:hover{
+    color: #cccccc;
+    cursor: pointer;
+}
+.close-shade-label{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.close-shade-label:hover{
+    transform: rotate(360deg);
+}
+.live-img-text-label{
+    font-size: 16px !important;
+}

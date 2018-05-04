@@ -1,0 +1,46 @@
+.skillContent{
+    width:670px;
+    margin:0 auto;
+}
+.skillBarDiv{
+    width: 344px;
+}
+.mySkillDiv{
+    background:url("../img/skills.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 0;
+
+}
+.skillProgressDiv{
+    width: 344px;
+    height: 10px;
+}
+.skillInnerProgress{
+    height: inherit;
+}
+.skillBarContent{
+    margin: 40px 0;
+    margin-left: 180px;
+}
+.skillBarDiv{
+    margin:20px 0;
+}
+.skillName{
+    font-weight: 100;
+    line-height: 26px;
+}
+.skill-head-div h2{
+    font-size: 30px;
+
+}
+.skill-head-div sub{
+    margin-left: 10px;
+    font-size: 16px
+;
+}
+.skill-head-div p{
+    font-size: 16px;
+    margin: 20px 0;
+}
