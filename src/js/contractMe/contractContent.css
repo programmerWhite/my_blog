@@ -1,6 +1,6 @@
 .contract-me-div{
     width:100%;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom:100px;
 }
 .contract-me-img-div{
@@ -8,19 +8,14 @@
 }
 .contract-me-shade-div{
     position: absolute;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     height: 100%;
     width: 100%;
     z-index: 10;
 }
 .contract-me-form{
-    position: absolute;
     height: 420px;
-    width: 400px;
-    left:50%;
-    top:50%;
-    margin-left:-200px;
-    margin-top:-210px;
+    width: 320px;
     background-color:white;
     z-index: 20;
     padding: 20px;
@@ -87,4 +82,85 @@
 .contract-me-form h2 sub{
     margin-left: 10px;
     font-size: 16px;
+}
+.flex-part-div{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -210px;
+    margin-left: -320px;
+    flex-wrap: nowrap;
+    z-index: 10;
+    align-items: center;
+}
+.phone-desc-div{
+    margin-left: 30px;
+
+    color: white;
+}
+.phone-desc-div span{
+    font-size: 20px;
+}
+.phone-desc-div p{
+    margin: 30px 0;
+    font-size: 26px;
+}
+.site-container-div{
+    text-align: center;
+}
+.site-icon{
+    margin: 10px auto;
+    font-size: 100px !important;
+}
+.site-container-div{
+    animation: siteA 3s linear infinite;
+    -webkit-animation: siteA 3s linear infinite;
+    position: relative;
+}
+@keyframes siteA {
+    10%{
+        top: 0px;
+    }
+    30%{
+        top: -20px;
+    }
+    40%{
+        transform:rotateY(0deg);
+        top: -20px;
+    }
+    55%{
+         transform:rotateY(180deg);
+         top: -20px;
+    }
+    70%{
+        transform:rotateY(0deg);
+        top: -20px;
+    }
+    90%{
+        top: 0px;
+    }
+}
+@-webkit-keyframes siteA {
+    10%{
+        top: 0px;
+    }
+    30%{
+        top: -20px;
+    }
+    40%{
+        transform:rotateY(0deg);
+        top: -20px;
+    }
+    55%{
+        transform:rotateY(180deg);
+        top: -20px;
+    }
+    70%{
+        transform:rotateY(0deg);
+        top: -20px;
+    }
+    90%{
+        top: 0px;
+    }
 }

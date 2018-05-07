@@ -17,13 +17,10 @@ class homeHead extends Component{
                     <div className="menuContainerDiv">
                         <div className="menuLeftPart">
                             <div className="menuText">
-                                <Link to="/">我</Link>
+                                <Link to="/" className="home-page">主页</Link>
                             </div>
                             <div className="menuText">
-                                <Link to="/" className="home-page">项目</Link>
-                            </div>
-                            <div className="menuText">
-                                <Link to="/">教育</Link>
+                                <Link to="/live" className="my-live">生活</Link>
                             </div>
                         </div>
                         <div className="myPhoto">

@@ -73,6 +73,10 @@
 	
 	var _commonJsContractMeContractMe2 = _interopRequireDefault(_commonJsContractMeContractMe);
 	
+	var _commonJsMyLiveMyLive = __webpack_require__(/*! common/js/myLive/myLive */ 135);
+	
+	var _commonJsMyLiveMyLive2 = _interopRequireDefault(_commonJsMyLiveMyLive);
+	
 	_reactDom2['default'].render(_react2['default'].createElement(
 	    _reactRouterDom.HashRouter,
 	    null,
@@ -83,6 +87,7 @@
 	            _reactRouterDom.Switch,
 	            null,
 	            _react2['default'].createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _commonJsHomeHome2['default'] }),
+	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/live', component: _commonJsMyLiveMyLive2['default'] }),
 	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/blog', component: _commonJsBlogBlog2['default'] }),
 	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/contract', component: _commonJsContractMeContractMe2['default'] })
 	        )
@@ -24267,17 +24272,8 @@
 	                                { className: 'menuText' },
 	                                _react2['default'].createElement(
 	                                    _reactRouterDom.Link,
-	                                    { to: '/' },
-	                                    '我'
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'menuText' },
-	                                _react2['default'].createElement(
-	                                    _reactRouterDom.Link,
 	                                    { to: '/', className: 'home-page' },
-	                                    '项目'
+	                                    '主页'
 	                                )
 	                            ),
 	                            _react2['default'].createElement(
@@ -24285,8 +24281,8 @@
 	                                { className: 'menuText' },
 	                                _react2['default'].createElement(
 	                                    _reactRouterDom.Link,
-	                                    { to: '/' },
-	                                    '教育'
+	                                    { to: '/live', className: 'my-live' },
+	                                    '生活'
 	                                )
 	                            )
 	                        ),
@@ -26050,7 +26046,16 @@
 		"./js/home/img/liveImg/8.jpg": 125,
 		"./js/home/img/liveImg/9.jpg": 126,
 		"./js/home/img/myPhoto.png": 76,
-		"./js/home/img/skills.jpg": 80
+		"./js/home/img/skills.jpg": 80,
+		"./js/myLive/fullScroll": 141,
+		"./js/myLive/fullScroll.css": 142,
+		"./js/myLive/fullScroll.js": 141,
+		"./js/myLive/myLive": 135,
+		"./js/myLive/myLive.css": 136,
+		"./js/myLive/myLive.js": 135,
+		"./js/myLive/myLiveContent": 138,
+		"./js/myLive/myLiveContent.css": 139,
+		"./js/myLive/myLiveContent.js": 138
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -37173,6 +37178,8 @@
 	
 	__webpack_require__(/*! common/js/contractMe/contractContent.css */ 131);
 	
+	__webpack_require__(/*! common/icon/iconfont.css */ 82);
+	
 	var ContractMe = (function (_Component) {
 	    _inherits(ContractMe, _Component);
 	
@@ -37195,27 +37202,55 @@
 	                    _react2["default"].createElement("img", { className: "map-img", src: __webpack_require__(/*! common/js/contractMe/img/mySite.png */ 133) }),
 	                    _react2["default"].createElement(
 	                        "div",
-	                        { className: "contract-me-form" },
-	                        _react2["default"].createElement(
-	                            "h2",
-	                            null,
-	                            "联系我",
-	                            _react2["default"].createElement(
-	                                "sub",
-	                                null,
-	                                "contract me"
-	                            )
-	                        ),
-	                        _react2["default"].createElement("input", { type: "text", placeholder: "你的名字", id: "visitorName" }),
-	                        _react2["default"].createElement("input", { type: "text", placeholder: "你的邮箱", id: "visitorEmail" }),
-	                        _react2["default"].createElement("textarea", { placeholder: "你的信息", id: "visitorMessage" }),
+	                        { className: "flex-part-div" },
 	                        _react2["default"].createElement(
 	                            "div",
-	                            null,
+	                            { className: "contract-me-form" },
+	                            _react2["default"].createElement(
+	                                "h2",
+	                                null,
+	                                "联系我",
+	                                _react2["default"].createElement(
+	                                    "sub",
+	                                    null,
+	                                    "contract me"
+	                                )
+	                            ),
+	                            _react2["default"].createElement("input", { type: "text", placeholder: "你的名字", id: "visitorName" }),
+	                            _react2["default"].createElement("input", { type: "text", placeholder: "你的邮箱", id: "visitorEmail" }),
+	                            _react2["default"].createElement("textarea", { placeholder: "你的信息", id: "visitorMessage" }),
 	                            _react2["default"].createElement(
 	                                "div",
-	                                { className: "submit-button", id: "submitButton" },
-	                                "提交"
+	                                null,
+	                                _react2["default"].createElement(
+	                                    "div",
+	                                    { className: "submit-button", id: "submitButton" },
+	                                    "提交"
+	                                )
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "div",
+	                            { className: "phone-desc-div" },
+	                            _react2["default"].createElement(
+	                                "div",
+	                                { className: "site-container-div" },
+	                                _react2["default"].createElement("span", { className: "site-icon icon iconfont icon-coordinates_fill" })
+	                            ),
+	                            _react2["default"].createElement(
+	                                "span",
+	                                null,
+	                                "如果你着急,请给我来电："
+	                            ),
+	                            _react2["default"].createElement(
+	                                "p",
+	                                null,
+	                                "182 - 0012 - 9286"
+	                            ),
+	                            _react2["default"].createElement(
+	                                "span",
+	                                null,
+	                                "不论你在哪里，我在这里等你。"
 	                            )
 	                        )
 	                    )
@@ -37271,7 +37306,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".contract-me-div{\r\n    width:100%;\r\n    margin-top: 200px;\r\n    margin-bottom:100px;\r\n}\r\n.contract-me-img-div{\r\n    position: relative;\r\n}\r\n.contract-me-shade-div{\r\n    position: absolute;\r\n    background-color: rgba(0,0,0,0.2);\r\n    height: 100%;\r\n    width: 100%;\r\n    z-index: 10;\r\n}\r\n.contract-me-form{\r\n    position: absolute;\r\n    height: 420px;\r\n    width: 400px;\r\n    left:50%;\r\n    top:50%;\r\n    margin-left:-200px;\r\n    margin-top:-210px;\r\n    background-color:white;\r\n    z-index: 20;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n}\r\n\r\n#visitorName,\r\n#visitorEmail{\r\n    display: block;\r\n    height: 40px;\r\n    width: 100%;\r\n    border-radius: 6px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    margin: 20px auto;\r\n\r\n}\r\n\r\n#visitorMessage{\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    border-radius: 6px;\r\n    width:100%;\r\n    resize:none;\r\n    height: 80px;\r\n    font-size:14px;\r\n    margin: 20px auto;\r\n}\r\n#visitorName:focus,\r\n#visitorEmail:focus,\r\n#visitorMessage:focus{\r\n    border-color: #fd4733;\r\n}\r\n.submit-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color:#fd4733;\r\n    line-height:40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.submit-button:hover{\r\n    background-color:white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.map-img{\r\n    width: 100%;\r\n}\r\n\r\n.contract-me-form h2{\r\n    margin: 20px auto;\r\n}\r\n.contract-me-form h2{\r\n    font-size: 20px;\r\n    color:#434e5c;\r\n}\r\n.contract-me-form h2 sub{\r\n    margin-left: 10px;\r\n    font-size: 16px;\r\n}", ""]);
+	exports.push([module.id, ".contract-me-div{\r\n    width:100%;\r\n    margin-top: 150px;\r\n    margin-bottom:100px;\r\n}\r\n.contract-me-img-div{\r\n    position: relative;\r\n}\r\n.contract-me-shade-div{\r\n    position: absolute;\r\n    background-color: rgba(0,0,0,0.4);\r\n    height: 100%;\r\n    width: 100%;\r\n    z-index: 10;\r\n}\r\n.contract-me-form{\r\n    height: 420px;\r\n    width: 320px;\r\n    background-color:white;\r\n    z-index: 20;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n}\r\n\r\n#visitorName,\r\n#visitorEmail{\r\n    display: block;\r\n    height: 40px;\r\n    width: 100%;\r\n    border-radius: 6px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    margin: 20px auto;\r\n\r\n}\r\n\r\n#visitorMessage{\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    border-radius: 6px;\r\n    width:100%;\r\n    resize:none;\r\n    height: 80px;\r\n    font-size:14px;\r\n    margin: 20px auto;\r\n}\r\n#visitorName:focus,\r\n#visitorEmail:focus,\r\n#visitorMessage:focus{\r\n    border-color: #fd4733;\r\n}\r\n.submit-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color:#fd4733;\r\n    line-height:40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.submit-button:hover{\r\n    background-color:white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.map-img{\r\n    width: 100%;\r\n}\r\n\r\n.contract-me-form h2{\r\n    margin: 20px auto;\r\n}\r\n.contract-me-form h2{\r\n    font-size: 20px;\r\n    color:#434e5c;\r\n}\r\n.contract-me-form h2 sub{\r\n    margin-left: 10px;\r\n    font-size: 16px;\r\n}\r\n.flex-part-div{\r\n    display: flex;\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    margin-top: -210px;\r\n    margin-left: -320px;\r\n    flex-wrap: nowrap;\r\n    z-index: 10;\r\n    align-items: center;\r\n}\r\n.phone-desc-div{\r\n    margin-left: 30px;\r\n\r\n    color: white;\r\n}\r\n.phone-desc-div span{\r\n    font-size: 20px;\r\n}\r\n.phone-desc-div p{\r\n    margin: 30px 0;\r\n    font-size: 26px;\r\n}\r\n.site-container-div{\r\n    text-align: center;\r\n}\r\n.site-icon{\r\n    margin: 10px auto;\r\n    font-size: 100px !important;\r\n}\r\n.site-container-div{\r\n    animation: siteA 3s linear infinite;\r\n    -webkit-animation: siteA 3s linear infinite;\r\n    position: relative;\r\n}\r\n@keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n         transform:rotateY(180deg);\r\n         top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}\r\n@-webkit-keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n        transform:rotateY(180deg);\r\n        top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}", ""]);
 	
 	// exports
 
@@ -37284,6 +37319,352 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "f138aa69ea4bd1893089ab2cdc625f18.png";
+
+/***/ }),
+/* 134 */,
+/* 135 */
+/*!*********************************!*\
+  !*** ./src/js/myLive/myLive.js ***!
+  \*********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _jquery = __webpack_require__(/*! jquery */ 104);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	__webpack_require__(/*! common/js/myLive/myLive.css */ 136);
+	
+	__webpack_require__(/*! common/css/common.css */ 107);
+	
+	var _commonJsHomeHomePageHomeHead = __webpack_require__(/*! common/js/home/homePage/homeHead */ 71);
+	
+	var _commonJsHomeHomePageHomeHead2 = _interopRequireDefault(_commonJsHomeHomePageHomeHead);
+	
+	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 138);
+	
+	var _commonJsMyLiveMyLiveContent2 = _interopRequireDefault(_commonJsMyLiveMyLiveContent);
+	
+	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 112);
+	
+	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
+	
+	var MyLive = (function (_Component) {
+	    _inherits(MyLive, _Component);
+	
+	    function MyLive() {
+	        _classCallCheck(this, MyLive);
+	
+	        _get(Object.getPrototypeOf(MyLive.prototype), 'constructor', this).call(this);
+	    }
+	
+	    _createClass(MyLive, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            (0, _jquery2['default'])('.my-live').addClass('current-menu');
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(_commonJsHomeHomePageHomeHead2['default'], null),
+	                _react2['default'].createElement(_commonJsMyLiveMyLiveContent2['default'], null),
+	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
+	            );
+	        }
+	    }]);
+	
+	    return MyLive;
+	})(_react.Component);
+	
+	exports['default'] = MyLive;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 136 */
+/*!**********************************!*\
+  !*** ./src/js/myLive/myLive.css ***!
+  \**********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLive.css */ 137);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./myLive.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./myLive.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 137 */
+/*!*************************************************!*\
+  !*** ./~/css-loader!./src/js/myLive/myLive.css ***!
+  \*************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 138 */
+/*!****************************************!*\
+  !*** ./src/js/myLive/myLiveContent.js ***!
+  \****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/myLive/myLiveContent.css */ 139);
+	
+	__webpack_require__(/*! common/icon/iconfont.css */ 82);
+	
+	var _commonJsMyLiveFullScroll = __webpack_require__(/*! common/js/myLive/fullScroll */ 141);
+	
+	var _commonJsMyLiveFullScroll2 = _interopRequireDefault(_commonJsMyLiveFullScroll);
+	
+	var MyLiveContent = (function (_Component) {
+	    _inherits(MyLiveContent, _Component);
+	
+	    function MyLiveContent() {
+	        _classCallCheck(this, MyLiveContent);
+	
+	        _get(Object.getPrototypeOf(MyLiveContent.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(MyLiveContent, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                null,
+	                _react2["default"].createElement(
+	                    "div",
+	                    null,
+	                    _react2["default"].createElement(_commonJsMyLiveFullScroll2["default"], null)
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return MyLiveContent;
+	})(_react.Component);
+	
+	exports["default"] = MyLiveContent;
+	module.exports = exports["default"];
+
+/***/ }),
+/* 139 */
+/*!*****************************************!*\
+  !*** ./src/js/myLive/myLiveContent.css ***!
+  \*****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLiveContent.css */ 140);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./myLiveContent.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./myLiveContent.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 140 */
+/*!********************************************************!*\
+  !*** ./~/css-loader!./src/js/myLive/myLiveContent.css ***!
+  \********************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".full-scroll-container-div{\r\n    width: 100%;\r\n    height: 500px;\r\n    margin-top: 120px;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 141 */
+/*!*************************************!*\
+  !*** ./src/js/myLive/fullScroll.js ***!
+  \*************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/myLive/fullScroll.css */ 142);
+	
+	var FullScroll = (function (_Component) {
+	    _inherits(FullScroll, _Component);
+	
+	    function FullScroll() {
+	        _classCallCheck(this, FullScroll);
+	
+	        _get(Object.getPrototypeOf(FullScroll.prototype), "constructor", this).call(this);
+	        this.state = {
+	            scrollData: [{
+	                title: "xxxxxxxx",
+	                desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
+	                imgArray: ["common/js/home/img/liveImg/1.jpg", "common/js/home/img/liveImg/2.jpg", "common/js/home/img/liveImg/3.jpg", "common/js/home/img/liveImg/4.jpg", "common/js/home/img/liveImg/5.jpg", "common/js/home/img/liveImg/6.jpg"]
+	            }, {
+	                title: "xxxxxxxx",
+	                desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
+	                imgArray: ["common/js/home/img/liveImg/7.jpg", "common/js/home/img/liveImg/8.jpg", "common/js/home/img/liveImg/9.jpg", "common/js/home/img/liveImg/10.jpg", "common/js/home/img/liveImg/11.jpg", "common/js/home/img/liveImg/12.jpg"]
+	            }]
+	        };
+	    }
+	
+	    _createClass(FullScroll, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement("div", { className: "full-scroll-container-div" });
+	        }
+	    }]);
+	
+	    return FullScroll;
+	})(_react.Component);
+	
+	exports["default"] = FullScroll;
+	module.exports = exports["default"];
+
+/***/ }),
+/* 142 */
+/*!**************************************!*\
+  !*** ./src/js/myLive/fullScroll.css ***!
+  \**************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./fullScroll.css */ 143);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./fullScroll.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./fullScroll.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 143 */
+/*!*****************************************************!*\
+  !*** ./~/css-loader!./src/js/myLive/fullScroll.css ***!
+  \*****************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "", ""]);
+	
+	// exports
+
 
 /***/ })
 /******/ ]);
