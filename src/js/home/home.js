@@ -8,8 +8,14 @@ import MyLive from 'common/js/home/homePage/myLive';
 import Foot from 'common/js/foot/foot.js';
 
 import "common/css/common.css";
+import $ from "jquery";
 
 class Home extends Component {
+
+    componentDidMount(){
+        $('.home-page').addClass('current-menu');
+    }
+
     render() {
         return (
             <div>

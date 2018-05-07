@@ -54,7 +54,7 @@ module.exports = {
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3000,
-            server: { baseDir: ['./build/'] }//会默认访问./build/index.html
+            server: { baseDir: ['./build/'] },//会默认访问./build/index.html
         })
     ]
 };

@@ -1,0 +1,90 @@
+.contract-me-div{
+    width:100%;
+    margin-top: 200px;
+    margin-bottom:100px;
+}
+.contract-me-img-div{
+    position: relative;
+}
+.contract-me-shade-div{
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.contract-me-form{
+    position: absolute;
+    height: 420px;
+    width: 400px;
+    left:50%;
+    top:50%;
+    margin-left:-200px;
+    margin-top:-210px;
+    background-color:white;
+    z-index: 20;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#visitorName,
+#visitorEmail{
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    margin: 20px auto;
+
+}
+
+#visitorMessage{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    width:100%;
+    resize:none;
+    height: 80px;
+    font-size:14px;
+    margin: 20px auto;
+}
+#visitorName:focus,
+#visitorEmail:focus,
+#visitorMessage:focus{
+    border-color: #fd4733;
+}
+.submit-button{
+    height: 40px;
+    width: 220px;
+    color: white;
+    background-color:#fd4733;
+    line-height:40px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background-color:white;
+    color: #fd4733;
+    border: 1px solid #fd4733;
+}
+.map-img{
+    width: 100%;
+}
+
+.contract-me-form h2{
+    margin: 20px auto;
+}
+.contract-me-form h2{
+    font-size: 20px;
+    color:#434e5c;
+}
+.contract-me-form h2 sub{
+    margin-left: 10px;
+    font-size: 16px;
+}

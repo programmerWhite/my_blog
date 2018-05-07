@@ -44,6 +44,9 @@
 .menuText a:hover{
     color: #fd4733;
 }
+.current-menu{
+    color: #fd4733 !important;
+}
 .myPhoto{
     height: 220px;
     width: 220px;
