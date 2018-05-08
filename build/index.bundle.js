@@ -25617,7 +25617,7 @@
 	                    ),
 	                    _react2["default"].createElement(
 	                        "div",
-	                        { className: "blankContainer left-icon", "data-index": this.props.index },
+	                        { className: "blankContainer left-icon" },
 	                        _react2["default"].createElement("div", { className: "icon iconfont icon-createtask_fill", "data-index": this.props.index })
 	                    )
 	                ) : _react2["default"].createElement(
@@ -25625,7 +25625,7 @@
 	                    { className: "blogInnerDiv", onClick: this.props.callBack, "data-index": this.props.index },
 	                    _react2["default"].createElement(
 	                        "div",
-	                        { className: "blankContainer right-icon", "data-index": this.props.index },
+	                        { className: "blankContainer right-icon" },
 	                        _react2["default"].createElement("div", { className: "icon iconfont icon-createtask_fill", "data-index": this.props.index })
 	                    ),
 	                    _react2["default"].createElement(
@@ -25694,7 +25694,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\r\n.blogTreeDiv{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n}\r\n.blogInnerDiv{\r\n    width: 100%;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: stretch;\r\n}\r\n.blankContainer{\r\n    width: 50%;\r\n    flex-shrink: 0;\r\n}\r\n.blogOneTitle{\r\n    font-size: 26px;\r\n    margin: 20px 0;\r\n}\r\n.blogOneDesc{\r\n    line-height: 20px;\r\n    font-size: 16px;\r\n}\r\n.blogTextContent{\r\n    padding: 0px 40px;\r\n    box-sizing: border-box;\r\n}\r\n.right-icon{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    border-right: 1px solid #434e5c;\r\n}\r\n.right-icon div{\r\n    margin-right: -40px;\r\n}\r\n.left-icon{\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    border-left: 1px solid #434e5c;\r\n    box-sizing: border-box;\r\n}\r\n.left-icon div{\r\n    margin-left: -40px;\r\n}\r\n.blankContainer .iconfont{\r\n    height: 80px;\r\n    width: 80px;\r\n    text-align: center;\r\n    font-size: 60px;\r\n    margin-top: 80px;\r\n    line-height: 80px;\r\n    background-color: white;\r\n}", ""]);
+	exports.push([module.id, "\r\n.blogTreeDiv{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n}\r\n.blogInnerDiv{\r\n    width: 100%;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: stretch;\r\n}\r\n.blankContainer{\r\n    width: 50%;\r\n    flex-shrink: 0;\r\n}\r\n.blogOneTitle{\r\n    font-size: 26px;\r\n    margin: 20px 0;\r\n}\r\n.blogOneDesc{\r\n    line-height: 20px;\r\n    font-size: 16px;\r\n}\r\n.blogTextContent{\r\n    padding: 0px 40px;\r\n    box-sizing: border-box;\r\n    cursor: pointer;\r\n}\r\n\r\n.blogTextContent:hover .blogOneTitle{\r\n    text-decoration: underline;\r\n}\r\n.right-icon{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    border-right: 1px solid #434e5c;\r\n}\r\n.right-icon div{\r\n    margin-right: -40px;\r\n}\r\n.left-icon{\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    border-left: 1px solid #434e5c;\r\n    box-sizing: border-box;\r\n}\r\n.left-icon div{\r\n    margin-left: -40px;\r\n}\r\n.blankContainer .iconfont{\r\n    height: 80px;\r\n    width: 80px;\r\n    text-align: center;\r\n    font-size: 60px;\r\n    margin-top: 80px;\r\n    line-height: 80px;\r\n    background-color: white;\r\n}", ""]);
 	
 	// exports
 
@@ -26055,7 +26055,13 @@
 		"./js/myLive/myLive.js": 137,
 		"./js/myLive/myLiveContent": 140,
 		"./js/myLive/myLiveContent.css": 141,
-		"./js/myLive/myLiveContent.js": 140
+		"./js/myLive/myLiveContent.js": 140,
+		"./js/myLive/waterFall": 143,
+		"./js/myLive/waterFall.css": 144,
+		"./js/myLive/waterFall.js": 143,
+		"./js/sampleHead/sampleHead": 148,
+		"./js/sampleHead/sampleHead.css": 149,
+		"./js/sampleHead/sampleHead.js": 148
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -26106,9 +26112,9 @@
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsHomeHomePageHomeHead = __webpack_require__(/*! common/js/home/homePage/homeHead */ 71);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
 	
-	var _commonJsHomeHomePageHomeHead2 = _interopRequireDefault(_commonJsHomeHomePageHomeHead);
+	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
 	var _commonJsBlogBlogContent = __webpack_require__(/*! common/js/blog/blogContent */ 109);
 	
@@ -26138,7 +26144,7 @@
 	            return _react2['default'].createElement(
 	                'div',
 	                null,
-	                _react2['default'].createElement(_commonJsHomeHomePageHomeHead2['default'], null),
+	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
 	                _react2['default'].createElement(_commonJsBlogBlogContent2['default'], null),
 	                _react2['default'].createElement(_commonJsFootFootJs2['default'], null)
 	            );
@@ -37072,7 +37078,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".contract-me-div{\r\n    width:100%;\r\n    margin-top: 150px;\r\n    margin-bottom:100px;\r\n}\r\n.contract-me-img-div{\r\n    position: relative;\r\n}\r\n.contract-me-shade-div{\r\n    position: absolute;\r\n    background-color: rgba(0,0,0,0.4);\r\n    height: 100%;\r\n    width: 100%;\r\n    z-index: 10;\r\n}\r\n.contract-me-form{\r\n    height: 420px;\r\n    width: 320px;\r\n    background-color:white;\r\n    z-index: 20;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n}\r\n\r\n#visitorName,\r\n#visitorEmail{\r\n    display: block;\r\n    height: 40px;\r\n    width: 100%;\r\n    border-radius: 6px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    margin: 20px auto;\r\n\r\n}\r\n\r\n#visitorMessage{\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    border-radius: 6px;\r\n    width:100%;\r\n    resize:none;\r\n    height: 80px;\r\n    font-size:14px;\r\n    margin: 20px auto;\r\n}\r\n#visitorName:focus,\r\n#visitorEmail:focus,\r\n#visitorMessage:focus{\r\n    border-color: #fd4733;\r\n}\r\n.submit-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color:#fd4733;\r\n    line-height:40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.submit-button:hover{\r\n    background-color:white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.map-img{\r\n    width: 100%;\r\n}\r\n\r\n.contract-me-form h2{\r\n    margin: 20px auto;\r\n}\r\n.contract-me-form h2{\r\n    font-size: 20px;\r\n    color:#434e5c;\r\n}\r\n.contract-me-form h2 sub{\r\n    margin-left: 10px;\r\n    font-size: 16px;\r\n}\r\n.flex-part-div{\r\n    display: flex;\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    margin-top: -210px;\r\n    margin-left: -320px;\r\n    flex-wrap: nowrap;\r\n    z-index: 10;\r\n    align-items: center;\r\n}\r\n.phone-desc-div{\r\n    margin-left: 30px;\r\n\r\n    color: white;\r\n}\r\n.phone-desc-div span{\r\n    font-size: 20px;\r\n}\r\n.phone-desc-div p{\r\n    margin: 30px 0;\r\n    font-size: 26px;\r\n}\r\n.site-container-div{\r\n    text-align: center;\r\n}\r\n.site-icon{\r\n    margin: 10px auto;\r\n    font-size: 100px !important;\r\n}\r\n.site-container-div{\r\n    animation: siteA 3s linear infinite;\r\n    -webkit-animation: siteA 3s linear infinite;\r\n    position: relative;\r\n}\r\n@keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n         transform:rotateY(180deg);\r\n         top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}\r\n@-webkit-keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n        transform:rotateY(180deg);\r\n        top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}", ""]);
+	exports.push([module.id, ".contract-me-div{\r\n    width:100%;\r\n    margin-top: 0px;\r\n    margin-bottom:0px;\r\n}\r\n.contract-me-img-div{\r\n    position: relative;\r\n}\r\n.contract-me-shade-div{\r\n    position: absolute;\r\n    background-color: rgba(0,0,0,0.4);\r\n    height: 100%;\r\n    width: 100%;\r\n    z-index: 10;\r\n}\r\n.contract-me-form{\r\n    height: 420px;\r\n    width: 320px;\r\n    background-color:white;\r\n    z-index: 20;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n}\r\n\r\n#visitorName,\r\n#visitorEmail{\r\n    display: block;\r\n    height: 40px;\r\n    width: 100%;\r\n    border-radius: 6px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    margin: 20px auto;\r\n\r\n}\r\n\r\n#visitorMessage{\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    border-radius: 6px;\r\n    width:100%;\r\n    resize:none;\r\n    height: 80px;\r\n    font-size:14px;\r\n    margin: 20px auto;\r\n}\r\n#visitorName:focus,\r\n#visitorEmail:focus,\r\n#visitorMessage:focus{\r\n    border-color: #fd4733;\r\n}\r\n.submit-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color:#fd4733;\r\n    line-height:40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.submit-button:hover{\r\n    background-color:white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.map-img{\r\n    width: 100%;\r\n}\r\n\r\n.contract-me-form h2{\r\n    margin: 20px auto;\r\n}\r\n.contract-me-form h2{\r\n    font-size: 20px;\r\n    color:#434e5c;\r\n}\r\n.contract-me-form h2 sub{\r\n    margin-left: 10px;\r\n    font-size: 16px;\r\n}\r\n.flex-part-div{\r\n    display: flex;\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    margin-top: -210px;\r\n    margin-left: -320px;\r\n    flex-wrap: nowrap;\r\n    z-index: 10;\r\n    align-items: center;\r\n}\r\n.phone-desc-div{\r\n    margin-left: 30px;\r\n\r\n    color: white;\r\n}\r\n.phone-desc-div span{\r\n    font-size: 20px;\r\n}\r\n.phone-desc-div p{\r\n    margin: 30px 0;\r\n    font-size: 26px;\r\n}\r\n.site-container-div{\r\n    text-align: center;\r\n}\r\n.site-icon{\r\n    margin: 10px auto;\r\n    font-size: 100px !important;\r\n}\r\n.site-container-div{\r\n    animation: siteA 3s linear infinite;\r\n    -webkit-animation: siteA 3s linear infinite;\r\n    position: relative;\r\n}\r\n@keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n         transform:rotateY(180deg);\r\n         top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}\r\n@-webkit-keyframes siteA {\r\n    10%{\r\n        top: 0px;\r\n    }\r\n    30%{\r\n        top: -20px;\r\n    }\r\n    40%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    55%{\r\n        transform:rotateY(180deg);\r\n        top: -20px;\r\n    }\r\n    70%{\r\n        transform:rotateY(0deg);\r\n        top: -20px;\r\n    }\r\n    90%{\r\n        top: 0px;\r\n    }\r\n}", ""]);
 	
 	// exports
 
@@ -37121,9 +37127,9 @@
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsHomeHomePageHomeHead = __webpack_require__(/*! common/js/home/homePage/homeHead */ 71);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
 	
-	var _commonJsHomeHomePageHomeHead2 = _interopRequireDefault(_commonJsHomeHomePageHomeHead);
+	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
 	var _commonJsContractMeContractContent = __webpack_require__(/*! common/js/contractMe/contractContent */ 115);
 	
@@ -37153,7 +37159,7 @@
 	            return _react2['default'].createElement(
 	                'div',
 	                null,
-	                _react2['default'].createElement(_commonJsHomeHomePageHomeHead2['default'], null),
+	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
 	                _react2['default'].createElement(_commonJsContractMeContractContent2['default'], null),
 	                _react2['default'].createElement(_commonJsFootFootJs2['default'], null)
 	            );
@@ -37364,7 +37370,7 @@
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "box-one-img-container", style: { backgroundColor: !!this.props.imgUrl ? "" : "rgba(0,0,0,0)" } },
-	                !!this.props.imgUrl ? _react2["default"].createElement("img", { src: __webpack_require__(/*! common */ 102)("./js" + this.props.imgUrl) }) : ""
+	                !!this.props.imgUrl ? _react2["default"].createElement("img", { src: "" + this.props.imgUrl }) : ""
 	            );
 	        }
 	    }]);
@@ -37380,30 +37386,53 @@
 	
 	        _get(Object.getPrototypeOf(NineBox.prototype), "constructor", this).call(this, props);
 	
-	        this.imgSiteArray = [[0, 3, 4, 5, 7, 8], [2, 5, 4, 5, 6, 7], [1, 2, 3, 4, 5, 7], [1, 2, 3, 4, 5, 6], [1, 4, 5, 6, 7, 8], [1, 2, 3, 4, 7, 8]];
+	        this.imgData = this.dealData(this.props.imgData);
 	
-	        this.imgData = new Array();
-	        this.imgData.length = 9;
-	
-	        this.ramdonNum = parseInt(Math.random() * this.imgSiteArray.length);
-	
-	        for (var i = 0; i < 9; i++) {
-	            this.imgData[i] = null;
-	        }
-	
-	        for (var i = 0; i < this.imgSiteArray[this.ramdonNum].length; i++) {
-	            var num = this.imgSiteArray[this.ramdonNum][i];
-	            this.imgData[num] = this.props.imgData[i];
-	        }
+	        this.state = {
+	            imgData: this.imgData
+	        };
 	    }
 	
 	    _createClass(NineBox, [{
+	        key: "componentWillReceiveProps",
+	        value: function componentWillReceiveProps(nextProps) {
+	
+	            var imgData = this.dealData(nextProps.imgData);
+	
+	            this.setState({
+	                imgData: imgData
+	            });
+	        }
+	    }, {
+	        key: "dealData",
+	        value: function dealData(imgData) {
+	            /*图片排布数据，每一个子项就是一个排布样式
+	            * 随机抽取，实现样式尽量不重复*/
+	            var imgSiteArray = [[0, 3, 4, 5, 7, 8], [2, 5, 4, 0, 6, 7], [1, 2, 3, 4, 5, 7], [1, 2, 3, 4, 5, 6], [1, 4, 5, 6, 7, 8], [1, 2, 3, 4, 7, 8]];
+	
+	            var imgDataT = new Array();
+	            imgDataT.length = 9;
+	
+	            var randomNum = parseInt(Math.random() * imgSiteArray.length);
+	
+	            for (var i = 0; i < 9; i++) {
+	                imgDataT[i] = null;
+	            }
+	
+	            for (var i = 0; i < imgSiteArray[randomNum].length; i++) {
+	                var num = imgSiteArray[randomNum][i];
+	                imgDataT[num] = imgData[i];
+	            }
+	            /*还回长度为 9 的填充数组*/
+	            return imgDataT;
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "nine-box-container" },
-	                this.imgData.map(function (imgData, index) {
+	                this.state.imgData.map(function (imgData, index) {
 	                    return _react2["default"].createElement(BoxOneImg, { imgUrl: imgData, key: index });
 	                })
 	            );
@@ -37420,9 +37449,32 @@
 	        _classCallCheck(this, ScrollPage);
 	
 	        _get(Object.getPrototypeOf(ScrollPage.prototype), "constructor", this).call(this, props);
+	
+	        this.randomKey = parseInt(Math.random() * props.scrollData.imgArray.length);
+	        this.state = {
+	            imgArray: props.scrollData.imgArray,
+	            bgRandomKey: this.randomKey,
+	            bg: {
+	                background: "url(" + this.props.scrollData.imgArray[this.randomKey] + ")"
+	            }
+	        };
 	    }
 	
 	    _createClass(ScrollPage, [{
+	        key: "componentWillReceiveProps",
+	        value: function componentWillReceiveProps(nextProps) {
+	
+	            this.randomKey = parseInt(Math.random() * nextProps.scrollData.imgArray.length);
+	
+	            this.setState({
+	                imgArray: nextProps.scrollData.imgArray,
+	                bgRandomKey: this.randomKey,
+	                bg: {
+	                    background: "url(" + nextProps.scrollData.imgArray[this.randomKey] + ")"
+	                }
+	            });
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            return _react2["default"].createElement(
@@ -37431,7 +37483,7 @@
 	                _react2["default"].createElement(
 	                    "div",
 	                    { className: "scroll-img-div" },
-	                    _react2["default"].createElement("img", { src: __webpack_require__(/*! common */ 102)("./js" + this.props.scrollData.imgArray[0]) })
+	                    _react2["default"].createElement("div", { className: "scroll-img-inner-blur", style: this.state.bg })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
@@ -37456,7 +37508,7 @@
 	                        _react2["default"].createElement(
 	                            "div",
 	                            { className: "right-part-scroll-div" },
-	                            _react2["default"].createElement(NineBox, { imgData: this.props.scrollData.imgArray })
+	                            _react2["default"].createElement(NineBox, { imgData: this.state.imgArray })
 	                        )
 	                    )
 	                )
@@ -37474,28 +37526,78 @@
 	        _classCallCheck(this, FullScroll);
 	
 	        _get(Object.getPrototypeOf(FullScroll.prototype), "constructor", this).call(this);
+	        this.scrollData = [{
+	            title: "xxxxxxxx",
+	            desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
+	            imgArray: ['https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon59WIJfjRAPpdrljI-TwAAi6DAF6ohsA-l3G603.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/01/06/ChMkJ1on59aABa4nATfERjoD4Lc051.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon5-CIckwBAKW6JlFU3AMAAi6DANC8r8Apbo-698.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon5-OIfTFRAPpdrljI-TwAAi6DQAAAAAA-l3G420.jpg', 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1525751321&di=b4ac5a7eb39386376b6702fc2d878c76&src=http://pic32.photophoto.cn/20140718/0033034334383169_b.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3MaILQyfAIIdsiHosYsAAgy-ABpPzUAgh3K554.jpg']
+	        }, {
+	            title: "aaaaaaaaaaa",
+	            desc: "asjdkoasjdklajdasjdkada sadad  asdadad asdadasda ldjaskldja asdalk",
+	            imgArray: ['https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3IOIKYY7AMxzeDBZucwAAgy9gBHPVMAzHOQ961.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526356366&di=0d6043a604238fdbcdc09b6e5e26e533&imgtype=jpg&er=1&src=http%3A%2F%2Fimg15.3lian.com%2F2015%2Fa1%2F03%2Fd%2F163.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3ISIR8BQANcmq544uRgAAgy9gEaCP4A1ybD679.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJ1nJ3IWIehscALReaep7Kw4AAgy9gH0OM4AtF6B101.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJ1nJ3KWIddOhAKu1JhxEX6YAAgy9wCF8LIAq7U-640.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=998254ca8d31bc14f3aa49e288710695&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Db7b8893a68d0f703f2bf9d9f60933b48%2F908fa0ec08fa513d1b3cb3f3376d55fbb2fbd90d.jpg']
+	        }, {
+	            title: "xxxxxxxx",
+	            desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
+	            imgArray: ['https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=b8d3b742c00eb807adecc1a6de41dd15&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121103%2F235077-12110306322128.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/02/ChMkJlnHOj2ICeciACiHxj33cI4AAgvowKUnYMAKIfe688.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/02/ChMkJlnHOiyIbYEFABphAE5Pa0AAAgvowHl01cAGmEY433.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=998254ca8d31bc14f3aa49e288710695&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Db7b8893a68d0f703f2bf9d9f60933b48%2F908fa0ec08fa513d1b3cb3f3376d55fbb2fbd90d.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657441&di=7af1caf3c35f70b4ca848531e782fdc5&imgtype=0&src=http%3A%2F%2Fwww.taopic.com%2Fuploads%2Fallimg%2F140816%2F235034-140Q60K05695.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657441&di=bb4702923f7b215fe9d653f038de8764&imgtype=0&src=http%3A%2F%2Fpic38.nipic.com%2F20140213%2F8825582_201924409134_2.jpg']
+	        }];
+	
 	        this.state = {
-	            scrollData: [{
-	                title: "xxxxxxxx",
-	                desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
-	                imgArray: ["/home/img/liveImg/1.jpg", "/home/img/liveImg/2.jpg", "/home/img/liveImg/3.jpg", "/home/img/liveImg/4.jpg", "/home/img/liveImg/5.jpg", "/home/img/liveImg/6.jpg"]
-	            }, {
-	                title: "xxxxxxxx",
-	                desc: "asjdkoasjdklajdasjdklajdklajdkaljdajdaklj dasldjaskldja asdalk",
-	                imgArray: ["/home/img/liveImg/7.jpg", "/home/img/liveImg/8.jpg", "/home/img/liveImg/9.jpg", "/home/img/liveImg/10.jpg", "/home/img/liveImg/11.jpg", "/home/img/liveImg/12.jpg"]
-	            }]
+	            arrayData: this.scrollData[0],
+	            currentIndex: 0
 	        };
+	        /*定时器变量*/
+	        this.scrollTimer = null;
 	    }
 	
 	    _createClass(FullScroll, [{
+	        key: "changeImgData",
+	        value: function changeImgData(index) {
+	
+	            this.setState({
+	                arrayData: this.scrollData[index],
+	                currentIndex: index
+	            });
+	        }
+	    }, {
+	        key: "componentDidMount",
+	        value: function componentDidMount() {
+	            var This = this;
+	            this.scrollTimer = setInterval(function () {
+	                var index = This.state.currentIndex;
+	
+	                if (index == This.scrollData.length - 1) {
+	                    index = 0;
+	                } else {
+	                    index++;
+	                }
+	                This.setState({
+	                    arrayData: This.scrollData[index],
+	                    currentIndex: index
+	                });
+	            }, 5000);
+	        }
+	    }, {
+	        key: "componentWillUnmount",
+	        value: function componentWillUnmount() {
+	            clearInterval(this.scrollTimer);
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
+	            var _this = this;
+	
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "full-scroll-container-div" },
-	                this.state.scrollData.map(function (scrollData, index) {
-	                    return _react2["default"].createElement(ScrollPage, { key: index, scrollData: scrollData });
-	                })
+	                _react2["default"].createElement(ScrollPage, { scrollData: this.state.arrayData }),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "scroll-index-container-div" },
+	                    this.scrollData.map(function (scrollData, index) {
+	                        return _react2["default"].createElement("div", { className: _this.state.currentIndex == index ? "scroll-index-one-div current-index-div" : "scroll-index-one-div", onClick: function () {
+	                                _this.changeImgData(index);
+	                            }, key: index });
+	                    })
+	                )
 	            );
 	        }
 	    }]);
@@ -37547,7 +37649,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".scroll-page-one{\r\n    height: inherit;\r\n    width: 100%;\r\n    position:absolute;\r\n}\r\n.scroll-img-div{\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n.scroll-img-div img{\r\n    width: 100%;\r\n    -webkit-filter: blur(20px);\r\n    -moz-filter: blur(20px);\r\n    -ms-filter: blur(20px);\r\n    -o-filter: blur(20px);\r\n    filter: blur(20px);\r\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=20, MakeShadow=false);\r\n}\r\n.scroll-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin:0 auto;\r\n    position: absolute;\r\n    top:0px;\r\n    display: flex;\r\n    height: inherit;\r\n    align-items: center;\r\n}\r\n.left-part-scroll-div,\r\n.right-part-scroll-div{\r\n    width: 50%;\r\n    flex-shrink: 0;\r\n}\r\n.left-part-scroll-div span{\r\n    font-size: 30px;\r\n    height:50px;\r\n    color: white;\r\n    background-color:#434e5c;\r\n    line-height: 50px;\r\n    padding:  10px;\r\n    box-sizing: border-box;\r\n    width: 90%;\r\n\r\n}\r\n.left-part-scroll-div p{\r\n    margin-top: 20px;\r\n    background-color:#cccccc;\r\n    color:white;\r\n    width: 90%;\r\n    line-height: 30px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n}\r\n.scroll-flex-div{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: stretch;\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.nine-box-container{\r\n    width: 400px;\r\n    height: 400px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.box-one-img-container{\r\n    width: 33.3%;\r\n    height:33.3%;\r\n    background-color: white;\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    margin-left: -5px;\r\n}\r\n.box-one-img-container img{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n", ""]);
+	exports.push([module.id, ".scroll-page-one{\r\n    height: inherit;\r\n    width: 100%;\r\n    position:absolute;\r\n}\r\n.scroll-img-div{\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n\r\n}\r\n.scroll-img-inner-blur{\r\n    width: 100%;\r\n    height: 100%;\r\n    -webkit-filter: blur(6px);\r\n    -moz-filter: blur(6px);\r\n    -ms-filter: blur(6px);\r\n    -o-filter: blur(6px);\r\n    filter: blur(6px);\r\n    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=6, MakeShadow=false);\r\n    background-size: 100% auto !important;\r\n    background-position: center !important;\r\n    background-repeat: no-repeat !important;\r\n}\r\n.scroll-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin:0 auto;\r\n    position: absolute;\r\n    top:0px;\r\n    display: flex;\r\n    height: inherit;\r\n    align-items: center;\r\n}\r\n.left-part-scroll-div,\r\n.right-part-scroll-div{\r\n    width: 50%;\r\n    flex-shrink: 0;\r\n}\r\n.left-part-scroll-div span{\r\n    font-size: 30px;\r\n    height:50px;\r\n    color: white;\r\n    background-color:#434e5c;\r\n    line-height: 50px;\r\n    padding:  10px;\r\n    box-sizing: border-box;\r\n    width: 90%;\r\n\r\n}\r\n.left-part-scroll-div p{\r\n    margin-top: 20px;\r\n    background-color:#cccccc;\r\n    color:white;\r\n    width: 90%;\r\n    line-height: 30px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n}\r\n.scroll-flex-div{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: stretch;\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.nine-box-container{\r\n    width: 400px;\r\n    height: 400px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.box-one-img-container{\r\n    width: 33.3%;\r\n    height:33.3%;\r\n    background-color: white;\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    margin-left: -5px;\r\n}\r\n.box-one-img-container img{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n", ""]);
 	
 	// exports
 
@@ -37587,9 +37689,9 @@
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsHomeHomePageHomeHead = __webpack_require__(/*! common/js/home/homePage/homeHead */ 71);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
 	
-	var _commonJsHomeHomePageHomeHead2 = _interopRequireDefault(_commonJsHomeHomePageHomeHead);
+	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
 	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 140);
 	
@@ -37619,7 +37721,7 @@
 	            return _react2['default'].createElement(
 	                'div',
 	                null,
-	                _react2['default'].createElement(_commonJsHomeHomePageHomeHead2['default'], null),
+	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
 	                _react2['default'].createElement(_commonJsMyLiveMyLiveContent2['default'], null),
 	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
 	            );
@@ -37713,6 +37815,10 @@
 	
 	var _commonJsMyLiveFullScroll2 = _interopRequireDefault(_commonJsMyLiveFullScroll);
 	
+	var _commonJsMyLiveWaterFall = __webpack_require__(/*! common/js/myLive/waterFall */ 143);
+	
+	var _commonJsMyLiveWaterFall2 = _interopRequireDefault(_commonJsMyLiveWaterFall);
+	
 	var MyLiveContent = (function (_Component) {
 	    _inherits(MyLiveContent, _Component);
 	
@@ -37731,7 +37837,8 @@
 	                _react2["default"].createElement(
 	                    "div",
 	                    null,
-	                    _react2["default"].createElement(_commonJsMyLiveFullScroll2["default"], null)
+	                    _react2["default"].createElement(_commonJsMyLiveFullScroll2["default"], null),
+	                    _react2["default"].createElement(_commonJsMyLiveWaterFall2["default"], null)
 	                )
 	            );
 	        }
@@ -37784,7 +37891,354 @@
 	
 	
 	// module
-	exports.push([module.id, ".full-scroll-container-div{\r\n    width: 100%;\r\n    height: 500px;\r\n    margin-top: 120px;\r\n}", ""]);
+	exports.push([module.id, ".full-scroll-container-div{\r\n    width: 100%;\r\n    height: 500px;\r\n    margin-top: 0px;\r\n    position: relative;\r\n}\r\n.scroll-index-container-div{\r\n    height: 30px;\r\n    position: absolute;\r\n    bottom: 0px;\r\n    display: flex;\r\n    justify-content: center;\r\n    width:100%;\r\n}\r\n.scroll-index-one-div{\r\n    height: 20px;\r\n    width: 20px;\r\n    background-color: #fd4733;\r\n    margin: 0 10px;\r\n    opacity: 0.5;\r\n    cursor: pointer;\r\n}\r\n\r\n.current-index-div{\r\n    opacity: 1;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 143 */
+/*!************************************!*\
+  !*** ./src/js/myLive/waterFall.js ***!
+  \************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/myLive/waterFall.css */ 144);
+	
+	var WaterFallImgDiv = (function (_Component) {
+	    _inherits(WaterFallImgDiv, _Component);
+	
+	    function WaterFallImgDiv(props) {
+	        _classCallCheck(this, WaterFallImgDiv);
+	
+	        _get(Object.getPrototypeOf(WaterFallImgDiv.prototype), "constructor", this).call(this, props);
+	
+	        var randomH = parseInt(Math.random() * 100) + 150;
+	        this.bg = {
+	            height: randomH + "px",
+	            background: 'url(' + this.props.imgUrl + ')'
+	        };
+	    }
+	
+	    _createClass(WaterFallImgDiv, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement("div", { style: this.bg, className: "water-fall-img-div" });
+	        }
+	    }]);
+	
+	    return WaterFallImgDiv;
+	})(_react.Component);
+	
+	var WaterFallLine = (function (_Component2) {
+	    _inherits(WaterFallLine, _Component2);
+	
+	    function WaterFallLine() {
+	        _classCallCheck(this, WaterFallLine);
+	
+	        _get(Object.getPrototypeOf(WaterFallLine.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(WaterFallLine, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "water-fall-line-div" },
+	                this.props.imgData.map(function (imgUrl, index) {
+	                    return _react2["default"].createElement(WaterFallImgDiv, { imgUrl: imgUrl, key: index });
+	                })
+	            );
+	        }
+	    }]);
+	
+	    return WaterFallLine;
+	})(_react.Component);
+	
+	var WaterFall = (function (_Component3) {
+	    _inherits(WaterFall, _Component3);
+	
+	    function WaterFall() {
+	        _classCallCheck(this, WaterFall);
+	
+	        _get(Object.getPrototypeOf(WaterFall.prototype), "constructor", this).call(this);
+	        this.state = {
+	            imgArray: null
+	        };
+	    }
+	
+	    _createClass(WaterFall, [{
+	        key: "componentWillMount",
+	        value: function componentWillMount() {
+	            var imgArray = ['https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon59WIJfjRAPpdrljI-TwAAi6DAF6ohsA-l3G603.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/01/06/ChMkJ1on59aABa4nATfERjoD4Lc051.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon5-CIckwBAKW6JlFU3AMAAi6DANC8r8Apbo-698.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0D/ChMkJlon5-OIfTFRAPpdrljI-TwAAi6DQAAAAAA-l3G420.jpg', 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1525751321&di=b4ac5a7eb39386376b6702fc2d878c76&src=http://pic32.photophoto.cn/20140718/0033034334383169_b.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3MaILQyfAIIdsiHosYsAAgy-ABpPzUAgh3K554.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3IOIKYY7AMxzeDBZucwAAgy9gBHPVMAzHOQ961.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526356366&di=0d6043a604238fdbcdc09b6e5e26e533&imgtype=jpg&er=1&src=http%3A%2F%2Fimg15.3lian.com%2F2015%2Fa1%2F03%2Fd%2F163.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJlnJ3ISIR8BQANcmq544uRgAAgy9gEaCP4A1ybD679.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJ1nJ3IWIehscALReaep7Kw4AAgy9gH0OM4AtF6B101.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0E/00/ChMkJ1nJ3KWIddOhAKu1JhxEX6YAAgy9wCF8LIAq7U-640.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=998254ca8d31bc14f3aa49e288710695&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Db7b8893a68d0f703f2bf9d9f60933b48%2F908fa0ec08fa513d1b3cb3f3376d55fbb2fbd90d.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=b8d3b742c00eb807adecc1a6de41dd15&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121103%2F235077-12110306322128.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/02/ChMkJlnHOj2ICeciACiHxj33cI4AAgvowKUnYMAKIfe688.jpg', 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/02/ChMkJlnHOiyIbYEFABphAE5Pa0AAAgvowHl01cAGmEY433.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657443&di=998254ca8d31bc14f3aa49e288710695&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Db7b8893a68d0f703f2bf9d9f60933b48%2F908fa0ec08fa513d1b3cb3f3376d55fbb2fbd90d.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657441&di=7af1caf3c35f70b4ca848531e782fdc5&imgtype=0&src=http%3A%2F%2Fwww.taopic.com%2Fuploads%2Fallimg%2F140816%2F235034-140Q60K05695.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657441&di=bb4702923f7b215fe9d653f038de8764&imgtype=0&src=http%3A%2F%2Fpic38.nipic.com%2F20140213%2F8825582_201924409134_2.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657440&di=fe5916a04dc2ea5c094eaa2517390fcd&imgtype=0&src=http%3A%2F%2Fpic5.photophoto.cn%2F20071228%2F0034034901778224_b.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525761657438&di=82f18ac943988dd33ecafede1e4bea41&imgtype=0&src=http%3A%2F%2Fpic34.photophoto.cn%2F20150127%2F0006019093196381_b.jpg'];
+	
+	            var imgArray2 = [[], [], [], [], []];
+	
+	            var index = 0;
+	            for (var i = 0; i < imgArray.length; i++) {
+	                if (index == 5) {
+	                    index = 0;
+	                }
+	                imgArray2[index].push(imgArray[i]);
+	                index++;
+	            }
+	
+	            this.setState({
+	                imgArray: imgArray2
+	            });
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "water-fall-div" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "water-fall-head-div" },
+	                    "一图一故事,一转一乾坤"
+	                ),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "water-fall-inner-div" },
+	                    this.state.imgArray.map(function (imgData, index) {
+	                        return _react2["default"].createElement(WaterFallLine, { key: index, imgData: imgData });
+	                    })
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return WaterFall;
+	})(_react.Component);
+	
+	exports["default"] = WaterFall;
+	module.exports = exports["default"];
+
+/***/ }),
+/* 144 */
+/*!*************************************!*\
+  !*** ./src/js/myLive/waterFall.css ***!
+  \*************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./waterFall.css */ 145);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./waterFall.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./waterFall.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 145 */
+/*!****************************************************!*\
+  !*** ./~/css-loader!./src/js/myLive/waterFall.css ***!
+  \****************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".water-fall-div{\r\n    width: 100%;\r\n    margin-top:100px\r\n}\r\n.water-fall-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n}\r\n.water-fall-line-div{\r\n    width: 20%;\r\n    padding: 2px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.water-fall-img-div{\r\n    width: 100%;\r\n    background-position: center !important;\r\n    background-size: cover !important;\r\n    margin-bottom:4px;\r\n    cursor:pointer;\r\n    transition: all 0.4s linear;\r\n    transform: rotateY(0deg);\r\n}\r\n\r\n.water-fall-img-div:hover{\r\n    transform: rotateY(180deg);\r\n}\r\n.water-fall-head-div{\r\n    text-align: center;\r\n    font-size: 40px;\r\n    color: #434e5c;\r\n    margin: 20px 0;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 146 */,
+/* 147 */,
+/* 148 */
+/*!*****************************************!*\
+  !*** ./src/js/sampleHead/sampleHead.js ***!
+  \*****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/sampleHead/sampleHead.css */ 149);
+	
+	var _reactRouterDom = __webpack_require__(/*! react-router-dom */ 28);
+	
+	var SampleHead = (function (_Component) {
+	    _inherits(SampleHead, _Component);
+	
+	    function SampleHead() {
+	        _classCallCheck(this, SampleHead);
+	
+	        _get(Object.getPrototypeOf(SampleHead.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(SampleHead, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "sample-head-container-div" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "sample-head-inner-div" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "sample-head-log-div" },
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            "吴"
+	                        ),
+	                        _react2["default"].createElement(
+	                            "sub",
+	                            null,
+	                            "WU YUN"
+	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "sample-head-menu-div" },
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/", className: "home-page" },
+	                                "主页"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/live", className: "my-live" },
+	                                "生活"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/blog", className: "bo-wen" },
+	                                "博文"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/contract", className: "contract-me" },
+	                                "联系我"
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SampleHead;
+	})(_react.Component);
+	
+	exports["default"] = SampleHead;
+	module.exports = exports["default"];
+
+/***/ }),
+/* 149 */
+/*!******************************************!*\
+  !*** ./src/js/sampleHead/sampleHead.css ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./sampleHead.css */ 150);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./sampleHead.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./sampleHead.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 150 */
+/*!*********************************************************!*\
+  !*** ./~/css-loader!./src/js/sampleHead/sampleHead.css ***!
+  \*********************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".sample-head-container-div{\r\n    width: 100%;\r\n    height: 100px;\r\n    background-color:#434e5c;\r\n}\r\n.sample-head-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: center;\r\n    height:inherit;\r\n}\r\n.sample-head-log-div{\r\n    font-size: 40px;\r\n    color: white;\r\n}\r\n.sample-head-log-div sub{\r\n    margin-left: 10px;\r\n    font-size:26px;\r\n}\r\n.sample-head-menu-div{\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    margin-left: 40px;\r\n}\r\n.sample-head-menu-div a{\r\n    margin: 0 10px;\r\n    color: white;\r\n    text-decoration: none;\r\n}", ""]);
 	
 	// exports
 

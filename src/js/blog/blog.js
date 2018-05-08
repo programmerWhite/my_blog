@@ -4,7 +4,7 @@ import 'common/js/blog/blog.css';
 
 import "common/css/common.css";
 
-import HomeHead from 'common/js/home/homePage/homeHead';
+import SampleHead from 'common/js/sampleHead/sampleHead';
 import BlogContent from 'common/js/blog/blogContent';
 import Foot from 'common/js/foot/foot.js';
 
@@ -21,7 +21,7 @@ class Blog extends Component{
     render(){
         return (
             <div>
-                <HomeHead />
+                <SampleHead />
 
                 <BlogContent />
 

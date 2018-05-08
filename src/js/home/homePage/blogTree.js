@@ -17,7 +17,7 @@ class BlogTree extends Component{
                                <div className="blogOneTitle" data-index={this.props.index}>{this.props.data.title}</div>
                                <div className="blogOneDesc" data-index={this.props.index}>{this.props.data.desc}</div>
                            </div>
-                            <div className="blankContainer left-icon" data-index={this.props.index}>
+                            <div className="blankContainer left-icon">
                                 <div className="icon iconfont icon-createtask_fill" data-index={this.props.index}></div>
                             </div>
                         </div>
@@ -25,7 +25,7 @@ class BlogTree extends Component{
                     :
                     (
                         <div className="blogInnerDiv" onClick={this.props.callBack} data-index={this.props.index}>
-                            <div className="blankContainer right-icon" data-index={this.props.index}>
+                            <div className="blankContainer right-icon" >
                                 <div className="icon iconfont icon-createtask_fill" data-index={this.props.index}></div>
                             </div>
                             <div className="blogTextContent" data-index={this.props.index}>

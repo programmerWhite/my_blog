@@ -4,7 +4,7 @@ import 'common/js/myLive/myLive.css';
 
 import "common/css/common.css";
 
-import HomeHead from 'common/js/home/homePage/homeHead';
+import SampleHead from 'common/js/sampleHead/sampleHead';
 
 import MyLiveContent from 'common/js/myLive/myLiveContent';
 
@@ -23,7 +23,8 @@ class MyLive extends Component{
     render(){
         return (
             <div>
-                <HomeHead />
+
+                <SampleHead />
 
                 <MyLiveContent />
 

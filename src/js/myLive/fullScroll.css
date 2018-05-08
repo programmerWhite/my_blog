@@ -7,15 +7,20 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+
 }
-.scroll-img-div img{
+.scroll-img-inner-blur{
     width: 100%;
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -ms-filter: blur(20px);
-    -o-filter: blur(20px);
-    filter: blur(20px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=20, MakeShadow=false);
+    height: 100%;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -ms-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=6, MakeShadow=false);
+    background-size: 100% auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 .scroll-inner-div{
     width: 100%;

@@ -24,6 +24,11 @@
 .blogTextContent{
     padding: 0px 40px;
     box-sizing: border-box;
+    cursor: pointer;
+}
+
+.blogTextContent:hover .blogOneTitle{
+    text-decoration: underline;
 }
 .right-icon{
     display: flex;

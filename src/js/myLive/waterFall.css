@@ -1,0 +1,36 @@
+.water-fall-div{
+    width: 100%;
+    margin-top:100px
+}
+.water-fall-inner-div{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.water-fall-line-div{
+    width: 20%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.water-fall-img-div{
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    margin-bottom:4px;
+    cursor:pointer;
+    transition: all 0.4s linear;
+    transform: rotateY(0deg);
+}
+
+.water-fall-img-div:hover{
+    transform: rotateY(180deg);
+}
+.water-fall-head-div{
+    text-align: center;
+    font-size: 40px;
+    color: #434e5c;
+    margin: 20px 0;
+}
