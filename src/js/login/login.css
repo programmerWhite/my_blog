@@ -1,0 +1,29 @@
+login-container-div{
+    width: 100%;
+}
+.login-inner-div{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top:80px;
+    margin-bottom:80px;
+}
+.login-img-div{
+    width: 50%;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-img-div img{
+    width: 60%;
+}
+.login-content-div{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

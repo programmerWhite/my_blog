@@ -28,6 +28,9 @@ class SampleHead extends Component{
                             <Link to="/contract" className="contract-me">联系我</Link>
                         </span>
                     </div>
+                    <div className="login-button-div">
+                        <Link to="/login" className="login">登陆</Link>
+                    </div>
                 </div>
             </div>
         );

@@ -11,10 +11,13 @@
     flex-wrap: nowrap;
     align-items: center;
     height:inherit;
+    position: relative;
 }
 .sample-head-log-div{
     font-size: 40px;
     color: white;
+    width:160px;
+    flex-shrink: 0;
 }
 .sample-head-log-div sub{
     margin-left: 10px;
@@ -24,9 +27,24 @@
     display: flex;
     flex-wrap: nowrap;
     margin-left: 40px;
+    width: 100%;
 }
 .sample-head-menu-div a{
     margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+.login-button-div{
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    color: white;
+    cursor: pointer;
+}
+.login-button-div:hover a{
+    color: #fd4733 ;
+}
+.login-button-div a{
     color: white;
     text-decoration: none;
 }

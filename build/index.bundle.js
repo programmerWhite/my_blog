@@ -69,13 +69,17 @@
 	
 	var _commonJsBlogBlog2 = _interopRequireDefault(_commonJsBlogBlog);
 	
-	var _commonJsContractMeContractMe = __webpack_require__(/*! common/js/contractMe/contractMe */ 119);
+	var _commonJsContractMeContractMe = __webpack_require__(/*! common/js/contractMe/contractMe */ 122);
 	
 	var _commonJsContractMeContractMe2 = _interopRequireDefault(_commonJsContractMeContractMe);
 	
-	var _commonJsMyLiveMyLive = __webpack_require__(/*! common/js/myLive/myLive */ 137);
+	var _commonJsMyLiveMyLive = __webpack_require__(/*! common/js/myLive/myLive */ 143);
 	
 	var _commonJsMyLiveMyLive2 = _interopRequireDefault(_commonJsMyLiveMyLive);
+	
+	var _commonJsLoginLogin = __webpack_require__(/*! common/js/login/login */ 137);
+	
+	var _commonJsLoginLogin2 = _interopRequireDefault(_commonJsLoginLogin);
 	
 	_reactDom2['default'].render(_react2['default'].createElement(
 	    _reactRouterDom.HashRouter,
@@ -89,7 +93,8 @@
 	            _react2['default'].createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _commonJsHomeHome2['default'] }),
 	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/live', component: _commonJsMyLiveMyLive2['default'] }),
 	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/blog', component: _commonJsBlogBlog2['default'] }),
-	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/contract', component: _commonJsContractMeContractMe2['default'] })
+	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/contract', component: _commonJsContractMeContractMe2['default'] }),
+	            _react2['default'].createElement(_reactRouterDom.Route, { path: '/login', component: _commonJsLoginLogin2['default'] })
 	        )
 	    )
 	), document.getElementById('content'));
@@ -24148,7 +24153,7 @@
 	
 	var _commonJsHomeHomePageMyLive2 = _interopRequireDefault(_commonJsHomeHomePageMyLive);
 	
-	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 112);
+	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 115);
 	
 	var _commonJsFootFootJs2 = _interopRequireDefault(_commonJsFootFootJs);
 	
@@ -25993,19 +25998,19 @@
 		"./js/blog/blog": 103,
 		"./js/blog/blog.css": 105,
 		"./js/blog/blog.js": 103,
-		"./js/blog/blogContent": 109,
-		"./js/blog/blogContent.css": 110,
-		"./js/blog/blogContent.js": 109,
-		"./js/contractMe/contractContent": 115,
-		"./js/contractMe/contractContent.css": 116,
-		"./js/contractMe/contractContent.js": 115,
-		"./js/contractMe/contractMe": 119,
-		"./js/contractMe/contractMe.css": 120,
-		"./js/contractMe/contractMe.js": 119,
-		"./js/contractMe/img/mySite.png": 118,
-		"./js/foot/foot": 112,
-		"./js/foot/foot.css": 113,
-		"./js/foot/foot.js": 112,
+		"./js/blog/blogContent": 112,
+		"./js/blog/blogContent.css": 113,
+		"./js/blog/blogContent.js": 112,
+		"./js/contractMe/contractContent": 118,
+		"./js/contractMe/contractContent.css": 119,
+		"./js/contractMe/contractContent.js": 118,
+		"./js/contractMe/contractMe": 122,
+		"./js/contractMe/contractMe.css": 123,
+		"./js/contractMe/contractMe.js": 122,
+		"./js/contractMe/img/mySite.png": 121,
+		"./js/foot/foot": 115,
+		"./js/foot/foot.css": 116,
+		"./js/foot/foot.js": 115,
 		"./js/home/home": 70,
 		"./js/home/home.js": 70,
 		"./js/home/homePage/blogTree": 96,
@@ -26033,35 +26038,45 @@
 		"./js/home/homePage/mySkill.css": 78,
 		"./js/home/homePage/mySkill.js": 77,
 		"./js/home/img/exp.jpg": 92,
-		"./js/home/img/liveImg/1.jpg": 122,
-		"./js/home/img/liveImg/10.jpg": 123,
-		"./js/home/img/liveImg/11.jpg": 124,
-		"./js/home/img/liveImg/12.jpg": 125,
-		"./js/home/img/liveImg/2.jpg": 126,
-		"./js/home/img/liveImg/3.jpg": 127,
-		"./js/home/img/liveImg/4.jpg": 128,
-		"./js/home/img/liveImg/5.jpg": 129,
-		"./js/home/img/liveImg/6.jpg": 130,
-		"./js/home/img/liveImg/7.jpg": 131,
-		"./js/home/img/liveImg/8.jpg": 132,
-		"./js/home/img/liveImg/9.jpg": 133,
+		"./js/home/img/liveImg/1.jpg": 125,
+		"./js/home/img/liveImg/10.jpg": 126,
+		"./js/home/img/liveImg/11.jpg": 127,
+		"./js/home/img/liveImg/12.jpg": 128,
+		"./js/home/img/liveImg/2.jpg": 129,
+		"./js/home/img/liveImg/3.jpg": 130,
+		"./js/home/img/liveImg/4.jpg": 131,
+		"./js/home/img/liveImg/5.jpg": 132,
+		"./js/home/img/liveImg/6.jpg": 133,
+		"./js/home/img/liveImg/7.jpg": 134,
+		"./js/home/img/liveImg/8.jpg": 135,
+		"./js/home/img/liveImg/9.jpg": 136,
 		"./js/home/img/myPhoto.png": 76,
 		"./js/home/img/skills.jpg": 80,
-		"./js/myLive/fullScroll": 134,
-		"./js/myLive/fullScroll.css": 135,
-		"./js/myLive/fullScroll.js": 134,
-		"./js/myLive/myLive": 137,
-		"./js/myLive/myLive.css": 138,
-		"./js/myLive/myLive.js": 137,
-		"./js/myLive/myLiveContent": 140,
-		"./js/myLive/myLiveContent.css": 141,
-		"./js/myLive/myLiveContent.js": 140,
-		"./js/myLive/waterFall": 143,
-		"./js/myLive/waterFall.css": 144,
-		"./js/myLive/waterFall.js": 143,
-		"./js/sampleHead/sampleHead": 148,
-		"./js/sampleHead/sampleHead.css": 149,
-		"./js/sampleHead/sampleHead.js": 148
+		"./js/login/img/login.png": 156,
+		"./js/login/login": 137,
+		"./js/login/login.css": 138,
+		"./js/login/login.js": 137,
+		"./js/login/loginContent": 152,
+		"./js/login/loginContent.css": 153,
+		"./js/login/loginContent.js": 152,
+		"./js/myLive/fullScroll": 140,
+		"./js/myLive/fullScroll.css": 141,
+		"./js/myLive/fullScroll.js": 140,
+		"./js/myLive/myLive": 143,
+		"./js/myLive/myLive.css": 144,
+		"./js/myLive/myLive.js": 143,
+		"./js/myLive/myLiveContent": 146,
+		"./js/myLive/myLiveContent.css": 147,
+		"./js/myLive/myLiveContent.js": 146,
+		"./js/myLive/waterFall": 149,
+		"./js/myLive/waterFall.css": 150,
+		"./js/myLive/waterFall.js": 149,
+		"./js/sampleHead/sampleHead": 109,
+		"./js/sampleHead/sampleHead.css": 110,
+		"./js/sampleHead/sampleHead.js": 109,
+		"./js/tool/inputComponent": 157,
+		"./js/tool/inputComponent.css": 158,
+		"./js/tool/inputComponent.js": 157
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -26112,15 +26127,15 @@
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
 	
 	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
-	var _commonJsBlogBlogContent = __webpack_require__(/*! common/js/blog/blogContent */ 109);
+	var _commonJsBlogBlogContent = __webpack_require__(/*! common/js/blog/blogContent */ 112);
 	
 	var _commonJsBlogBlogContent2 = _interopRequireDefault(_commonJsBlogBlogContent);
 	
-	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 112);
+	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 115);
 	
 	var _commonJsFootFootJs2 = _interopRequireDefault(_commonJsFootFootJs);
 	
@@ -36624,6 +36639,175 @@
 
 /***/ }),
 /* 109 */
+/*!*****************************************!*\
+  !*** ./src/js/sampleHead/sampleHead.js ***!
+  \*****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/sampleHead/sampleHead.css */ 110);
+	
+	var _reactRouterDom = __webpack_require__(/*! react-router-dom */ 28);
+	
+	var SampleHead = (function (_Component) {
+	    _inherits(SampleHead, _Component);
+	
+	    function SampleHead() {
+	        _classCallCheck(this, SampleHead);
+	
+	        _get(Object.getPrototypeOf(SampleHead.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(SampleHead, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "sample-head-container-div" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "sample-head-inner-div" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "sample-head-log-div" },
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            "吴"
+	                        ),
+	                        _react2["default"].createElement(
+	                            "sub",
+	                            null,
+	                            "WU YUN"
+	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "sample-head-menu-div" },
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/", className: "home-page" },
+	                                "主页"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/live", className: "my-live" },
+	                                "生活"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/blog", className: "bo-wen" },
+	                                "博文"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            _react2["default"].createElement(
+	                                _reactRouterDom.Link,
+	                                { to: "/contract", className: "contract-me" },
+	                                "联系我"
+	                            )
+	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "login-button-div" },
+	                        _react2["default"].createElement(
+	                            _reactRouterDom.Link,
+	                            { to: "/login", className: "login" },
+	                            "登陆"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SampleHead;
+	})(_react.Component);
+	
+	exports["default"] = SampleHead;
+	module.exports = exports["default"];
+
+/***/ }),
+/* 110 */
+/*!******************************************!*\
+  !*** ./src/js/sampleHead/sampleHead.css ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./sampleHead.css */ 111);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./sampleHead.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./sampleHead.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 111 */
+/*!*********************************************************!*\
+  !*** ./~/css-loader!./src/js/sampleHead/sampleHead.css ***!
+  \*********************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".sample-head-container-div{\r\n    width: 100%;\r\n    height: 100px;\r\n    background-color:#434e5c;\r\n}\r\n.sample-head-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: center;\r\n    height:inherit;\r\n    position: relative;\r\n}\r\n.sample-head-log-div{\r\n    font-size: 40px;\r\n    color: white;\r\n    width:160px;\r\n    flex-shrink: 0;\r\n}\r\n.sample-head-log-div sub{\r\n    margin-left: 10px;\r\n    font-size:26px;\r\n}\r\n.sample-head-menu-div{\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    margin-left: 40px;\r\n    width: 100%;\r\n}\r\n.sample-head-menu-div a{\r\n    margin: 0 10px;\r\n    color: white;\r\n    text-decoration: none;\r\n}\r\n.login-button-div{\r\n    position: absolute;\r\n    right: 0px;\r\n    top: 40px;\r\n    color: white;\r\n    cursor: pointer;\r\n}\r\n.login-button-div:hover a{\r\n    color: #fd4733 ;\r\n}\r\n.login-button-div a{\r\n    color: white;\r\n    text-decoration: none;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 112 */
 /*!************************************!*\
   !*** ./src/js/blog/blogContent.js ***!
   \************************************/
@@ -36649,7 +36833,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/blog/blogContent.css */ 110);
+	__webpack_require__(/*! common/js/blog/blogContent.css */ 113);
 	
 	var _commonJsHomeHomePageBlogTree = __webpack_require__(/*! common/js/home/homePage/blogTree */ 96);
 	
@@ -36758,7 +36942,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 110 */
+/* 113 */
 /*!*************************************!*\
   !*** ./src/js/blog/blogContent.css ***!
   \*************************************/
@@ -36767,7 +36951,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./blogContent.css */ 111);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./blogContent.css */ 114);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -36787,7 +36971,7 @@
 	}
 
 /***/ }),
-/* 111 */
+/* 114 */
 /*!****************************************************!*\
   !*** ./~/css-loader!./src/js/blog/blogContent.css ***!
   \****************************************************/
@@ -36804,7 +36988,7 @@
 
 
 /***/ }),
-/* 112 */
+/* 115 */
 /*!*****************************!*\
   !*** ./src/js/foot/foot.js ***!
   \*****************************/
@@ -36830,7 +37014,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! ./foot.css */ 113);
+	__webpack_require__(/*! ./foot.css */ 116);
 	
 	var Foot = (function (_Component) {
 	    _inherits(Foot, _Component);
@@ -36876,7 +37060,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 113 */
+/* 116 */
 /*!******************************!*\
   !*** ./src/js/foot/foot.css ***!
   \******************************/
@@ -36885,7 +37069,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./foot.css */ 114);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./foot.css */ 117);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -36905,7 +37089,7 @@
 	}
 
 /***/ }),
-/* 114 */
+/* 117 */
 /*!*********************************************!*\
   !*** ./~/css-loader!./src/js/foot/foot.css ***!
   \*********************************************/
@@ -36922,7 +37106,7 @@
 
 
 /***/ }),
-/* 115 */
+/* 118 */
 /*!**********************************************!*\
   !*** ./src/js/contractMe/contractContent.js ***!
   \**********************************************/
@@ -36948,7 +37132,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/contractMe/contractContent.css */ 116);
+	__webpack_require__(/*! common/js/contractMe/contractContent.css */ 119);
 	
 	__webpack_require__(/*! common/icon/iconfont.css */ 82);
 	
@@ -36971,7 +37155,7 @@
 	                    "div",
 	                    { className: "contract-me-img-div" },
 	                    _react2["default"].createElement("div", { className: "contract-me-shade-div" }),
-	                    _react2["default"].createElement("img", { className: "map-img", src: __webpack_require__(/*! common/js/contractMe/img/mySite.png */ 118) }),
+	                    _react2["default"].createElement("img", { className: "map-img", src: __webpack_require__(/*! common/js/contractMe/img/mySite.png */ 121) }),
 	                    _react2["default"].createElement(
 	                        "div",
 	                        { className: "flex-part-div" },
@@ -37038,7 +37222,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 116 */
+/* 119 */
 /*!***********************************************!*\
   !*** ./src/js/contractMe/contractContent.css ***!
   \***********************************************/
@@ -37047,7 +37231,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./contractContent.css */ 117);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./contractContent.css */ 120);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37067,7 +37251,7 @@
 	}
 
 /***/ }),
-/* 117 */
+/* 120 */
 /*!**************************************************************!*\
   !*** ./~/css-loader!./src/js/contractMe/contractContent.css ***!
   \**************************************************************/
@@ -37084,7 +37268,7 @@
 
 
 /***/ }),
-/* 118 */
+/* 121 */
 /*!******************************************!*\
   !*** ./src/js/contractMe/img/mySite.png ***!
   \******************************************/
@@ -37093,7 +37277,7 @@
 	module.exports = __webpack_require__.p + "f138aa69ea4bd1893089ab2cdc625f18.png";
 
 /***/ }),
-/* 119 */
+/* 122 */
 /*!*****************************************!*\
   !*** ./src/js/contractMe/contractMe.js ***!
   \*****************************************/
@@ -37123,19 +37307,19 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	__webpack_require__(/*! common/js/contractMe/contractMe.css */ 120);
+	__webpack_require__(/*! common/js/contractMe/contractMe.css */ 123);
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
 	
 	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
-	var _commonJsContractMeContractContent = __webpack_require__(/*! common/js/contractMe/contractContent */ 115);
+	var _commonJsContractMeContractContent = __webpack_require__(/*! common/js/contractMe/contractContent */ 118);
 	
 	var _commonJsContractMeContractContent2 = _interopRequireDefault(_commonJsContractMeContractContent);
 	
-	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 112);
+	var _commonJsFootFootJs = __webpack_require__(/*! common/js/foot/foot.js */ 115);
 	
 	var _commonJsFootFootJs2 = _interopRequireDefault(_commonJsFootFootJs);
 	
@@ -37173,7 +37357,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 120 */
+/* 123 */
 /*!******************************************!*\
   !*** ./src/js/contractMe/contractMe.css ***!
   \******************************************/
@@ -37182,7 +37366,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./contractMe.css */ 121);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./contractMe.css */ 124);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37202,7 +37386,7 @@
 	}
 
 /***/ }),
-/* 121 */
+/* 124 */
 /*!*********************************************************!*\
   !*** ./~/css-loader!./src/js/contractMe/contractMe.css ***!
   \*********************************************************/
@@ -37219,7 +37403,7 @@
 
 
 /***/ }),
-/* 122 */
+/* 125 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/1.jpg ***!
   \***************************************/
@@ -37228,7 +37412,7 @@
 	module.exports = __webpack_require__.p + "86b5fa85284359498c4388351e1e1792.jpg";
 
 /***/ }),
-/* 123 */
+/* 126 */
 /*!****************************************!*\
   !*** ./src/js/home/img/liveImg/10.jpg ***!
   \****************************************/
@@ -37237,7 +37421,7 @@
 	module.exports = __webpack_require__.p + "3aeda6ad878a67c60414fa9696d23464.jpg";
 
 /***/ }),
-/* 124 */
+/* 127 */
 /*!****************************************!*\
   !*** ./src/js/home/img/liveImg/11.jpg ***!
   \****************************************/
@@ -37246,7 +37430,7 @@
 	module.exports = __webpack_require__.p + "794105d7103d003bdaba79dd91aaef18.jpg";
 
 /***/ }),
-/* 125 */
+/* 128 */
 /*!****************************************!*\
   !*** ./src/js/home/img/liveImg/12.jpg ***!
   \****************************************/
@@ -37255,7 +37439,7 @@
 	module.exports = __webpack_require__.p + "1d369359d2bbfb5105968474fd7dbc99.jpg";
 
 /***/ }),
-/* 126 */
+/* 129 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/2.jpg ***!
   \***************************************/
@@ -37264,7 +37448,7 @@
 	module.exports = __webpack_require__.p + "185b27d64de2e5c8959197391700f6f7.jpg";
 
 /***/ }),
-/* 127 */
+/* 130 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/3.jpg ***!
   \***************************************/
@@ -37273,7 +37457,7 @@
 	module.exports = __webpack_require__.p + "ab2943184ee04f35c4ab41ee00251276.jpg";
 
 /***/ }),
-/* 128 */
+/* 131 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/4.jpg ***!
   \***************************************/
@@ -37282,7 +37466,7 @@
 	module.exports = __webpack_require__.p + "f791b074c3aa7323e074da76d8851698.jpg";
 
 /***/ }),
-/* 129 */
+/* 132 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/5.jpg ***!
   \***************************************/
@@ -37291,7 +37475,7 @@
 	module.exports = __webpack_require__.p + "cc5e8fae632d40821191edc72a836c16.jpg";
 
 /***/ }),
-/* 130 */
+/* 133 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/6.jpg ***!
   \***************************************/
@@ -37300,7 +37484,7 @@
 	module.exports = __webpack_require__.p + "74b36545316e954c5e7dcb96047d60b6.jpg";
 
 /***/ }),
-/* 131 */
+/* 134 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/7.jpg ***!
   \***************************************/
@@ -37309,7 +37493,7 @@
 	module.exports = __webpack_require__.p + "52dd38770f422e003f794854ee82d699.jpg";
 
 /***/ }),
-/* 132 */
+/* 135 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/8.jpg ***!
   \***************************************/
@@ -37318,7 +37502,7 @@
 	module.exports = __webpack_require__.p + "ecc612c88ce3b59602016ca5918b7004.jpg";
 
 /***/ }),
-/* 133 */
+/* 136 */
 /*!***************************************!*\
   !*** ./src/js/home/img/liveImg/9.jpg ***!
   \***************************************/
@@ -37327,7 +37511,139 @@
 	module.exports = __webpack_require__.p + "ad0c27e873339bbe6df2d9927afd3a5b.jpg";
 
 /***/ }),
-/* 134 */
+/* 137 */
+/*!*******************************!*\
+  !*** ./src/js/login/login.js ***!
+  \*******************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/login/login.css */ 138);
+	
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
+	
+	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
+	
+	var _commonJsLoginLoginContent = __webpack_require__(/*! common/js/login/loginContent */ 152);
+	
+	var _commonJsLoginLoginContent2 = _interopRequireDefault(_commonJsLoginLoginContent);
+	
+	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 115);
+	
+	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
+	
+	var Login = (function (_Component) {
+	    _inherits(Login, _Component);
+	
+	    function Login() {
+	        _classCallCheck(this, Login);
+	
+	        _get(Object.getPrototypeOf(Login.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Login, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'login-big-container' },
+	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'login-container-div' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'login-inner-div' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'login-img-div' },
+	                            _react2['default'].createElement('img', { src: __webpack_require__(/*! common/js/login/img/login.png */ 156) })
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'login-content-div' },
+	                            _react2['default'].createElement(_commonJsLoginLoginContent2['default'], null)
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
+	            );
+	        }
+	    }]);
+	
+	    return Login;
+	})(_react.Component);
+	
+	exports['default'] = Login;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 138 */
+/*!********************************!*\
+  !*** ./src/js/login/login.css ***!
+  \********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./login.css */ 139);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./login.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./login.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 139 */
+/*!***********************************************!*\
+  !*** ./~/css-loader!./src/js/login/login.css ***!
+  \***********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "login-container-div{\r\n    width: 100%;\r\n}\r\n.login-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: center;\r\n    margin-top:80px;\r\n    margin-bottom:80px;\r\n}\r\n.login-img-div{\r\n    width: 50%;\r\n    text-align: center;\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.login-img-div img{\r\n    width: 60%;\r\n}\r\n.login-content-div{\r\n    width:50%;\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 140 */
 /*!*************************************!*\
   !*** ./src/js/myLive/fullScroll.js ***!
   \*************************************/
@@ -37353,7 +37669,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/fullScroll.css */ 135);
+	__webpack_require__(/*! common/js/myLive/fullScroll.css */ 141);
 	
 	var BoxOneImg = (function (_Component) {
 	    _inherits(BoxOneImg, _Component);
@@ -37609,7 +37925,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 135 */
+/* 141 */
 /*!**************************************!*\
   !*** ./src/js/myLive/fullScroll.css ***!
   \**************************************/
@@ -37618,7 +37934,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./fullScroll.css */ 136);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./fullScroll.css */ 142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37638,7 +37954,7 @@
 	}
 
 /***/ }),
-/* 136 */
+/* 142 */
 /*!*****************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/fullScroll.css ***!
   \*****************************************************/
@@ -37655,7 +37971,7 @@
 
 
 /***/ }),
-/* 137 */
+/* 143 */
 /*!*********************************!*\
   !*** ./src/js/myLive/myLive.js ***!
   \*********************************/
@@ -37685,19 +38001,19 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	__webpack_require__(/*! common/js/myLive/myLive.css */ 138);
+	__webpack_require__(/*! common/js/myLive/myLive.css */ 144);
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
-	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 148);
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
 	
 	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
-	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 140);
+	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 146);
 	
 	var _commonJsMyLiveMyLiveContent2 = _interopRequireDefault(_commonJsMyLiveMyLiveContent);
 	
-	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 112);
+	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 115);
 	
 	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
 	
@@ -37735,7 +38051,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 138 */
+/* 144 */
 /*!**********************************!*\
   !*** ./src/js/myLive/myLive.css ***!
   \**********************************/
@@ -37744,7 +38060,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./myLive.css */ 139);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLive.css */ 145);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37764,7 +38080,7 @@
 	}
 
 /***/ }),
-/* 139 */
+/* 145 */
 /*!*************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/myLive.css ***!
   \*************************************************/
@@ -37781,7 +38097,7 @@
 
 
 /***/ }),
-/* 140 */
+/* 146 */
 /*!****************************************!*\
   !*** ./src/js/myLive/myLiveContent.js ***!
   \****************************************/
@@ -37807,15 +38123,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/myLiveContent.css */ 141);
+	__webpack_require__(/*! common/js/myLive/myLiveContent.css */ 147);
 	
 	__webpack_require__(/*! common/icon/iconfont.css */ 82);
 	
-	var _commonJsMyLiveFullScroll = __webpack_require__(/*! common/js/myLive/fullScroll */ 134);
+	var _commonJsMyLiveFullScroll = __webpack_require__(/*! common/js/myLive/fullScroll */ 140);
 	
 	var _commonJsMyLiveFullScroll2 = _interopRequireDefault(_commonJsMyLiveFullScroll);
 	
-	var _commonJsMyLiveWaterFall = __webpack_require__(/*! common/js/myLive/waterFall */ 143);
+	var _commonJsMyLiveWaterFall = __webpack_require__(/*! common/js/myLive/waterFall */ 149);
 	
 	var _commonJsMyLiveWaterFall2 = _interopRequireDefault(_commonJsMyLiveWaterFall);
 	
@@ -37851,7 +38167,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 141 */
+/* 147 */
 /*!*****************************************!*\
   !*** ./src/js/myLive/myLiveContent.css ***!
   \*****************************************/
@@ -37860,7 +38176,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./myLiveContent.css */ 142);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLiveContent.css */ 148);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37880,7 +38196,7 @@
 	}
 
 /***/ }),
-/* 142 */
+/* 148 */
 /*!********************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/myLiveContent.css ***!
   \********************************************************/
@@ -37897,7 +38213,7 @@
 
 
 /***/ }),
-/* 143 */
+/* 149 */
 /*!************************************!*\
   !*** ./src/js/myLive/waterFall.js ***!
   \************************************/
@@ -37923,7 +38239,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/waterFall.css */ 144);
+	__webpack_require__(/*! common/js/myLive/waterFall.css */ 150);
 	
 	var WaterFallImgDiv = (function (_Component) {
 	    _inherits(WaterFallImgDiv, _Component);
@@ -38036,7 +38352,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 144 */
+/* 150 */
 /*!*************************************!*\
   !*** ./src/js/myLive/waterFall.css ***!
   \*************************************/
@@ -38045,7 +38361,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./waterFall.css */ 145);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./waterFall.css */ 151);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38065,7 +38381,7 @@
 	}
 
 /***/ }),
-/* 145 */
+/* 151 */
 /*!****************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/waterFall.css ***!
   \****************************************************/
@@ -38082,12 +38398,10 @@
 
 
 /***/ }),
-/* 146 */,
-/* 147 */,
-/* 148 */
-/*!*****************************************!*\
-  !*** ./src/js/sampleHead/sampleHead.js ***!
-  \*****************************************/
+/* 152 */
+/*!**************************************!*\
+  !*** ./src/js/login/loginContent.js ***!
+  \**************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38110,104 +38424,75 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/sampleHead/sampleHead.css */ 149);
+	__webpack_require__(/*! common/js/login/loginContent.css */ 153);
 	
-	var _reactRouterDom = __webpack_require__(/*! react-router-dom */ 28);
+	var _commonJsToolInputComponent = __webpack_require__(/*! common/js/tool/inputComponent */ 157);
 	
-	var SampleHead = (function (_Component) {
-	    _inherits(SampleHead, _Component);
+	var LoginContent = (function (_Component) {
+	    _inherits(LoginContent, _Component);
 	
-	    function SampleHead() {
-	        _classCallCheck(this, SampleHead);
+	    function LoginContent() {
+	        _classCallCheck(this, LoginContent);
 	
-	        _get(Object.getPrototypeOf(SampleHead.prototype), "constructor", this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(LoginContent.prototype), "constructor", this).apply(this, arguments);
 	    }
 	
-	    _createClass(SampleHead, [{
+	    _createClass(LoginContent, [{
 	        key: "render",
 	        value: function render() {
 	            return _react2["default"].createElement(
 	                "div",
-	                { className: "sample-head-container-div" },
+	                { className: "login-box-container-div" },
+	                _react2["default"].createElement(
+	                    "h2",
+	                    null,
+	                    "登陆",
+	                    _react2["default"].createElement(
+	                        "sub",
+	                        null,
+	                        "Login"
+	                    )
+	                ),
 	                _react2["default"].createElement(
 	                    "div",
-	                    { className: "sample-head-inner-div" },
+	                    { className: "input-line-site-div" },
+	                    _react2["default"].createElement(_commonJsToolInputComponent.InputLabel, { type: "text", placeHolder: "用户名", labelText: "用户名" })
+	                ),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "input-line-site-div" },
+	                    _react2["default"].createElement(_commonJsToolInputComponent.InputLabel, { type: "password", placeHolder: "密码", labelText: "密码" })
+	                ),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "input-line-site-div" },
 	                    _react2["default"].createElement(
 	                        "div",
-	                        { className: "sample-head-log-div" },
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            "吴"
-	                        ),
-	                        _react2["default"].createElement(
-	                            "sub",
-	                            null,
-	                            "WU YUN"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "div",
-	                        { className: "sample-head-menu-div" },
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            _react2["default"].createElement(
-	                                _reactRouterDom.Link,
-	                                { to: "/", className: "home-page" },
-	                                "主页"
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            _react2["default"].createElement(
-	                                _reactRouterDom.Link,
-	                                { to: "/live", className: "my-live" },
-	                                "生活"
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            _react2["default"].createElement(
-	                                _reactRouterDom.Link,
-	                                { to: "/blog", className: "bo-wen" },
-	                                "博文"
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            _react2["default"].createElement(
-	                                _reactRouterDom.Link,
-	                                { to: "/contract", className: "contract-me" },
-	                                "联系我"
-	                            )
-	                        )
+	                        { className: "login-button" },
+	                        "登录"
 	                    )
 	                )
 	            );
 	        }
 	    }]);
 	
-	    return SampleHead;
+	    return LoginContent;
 	})(_react.Component);
 	
-	exports["default"] = SampleHead;
+	exports["default"] = LoginContent;
 	module.exports = exports["default"];
 
 /***/ }),
-/* 149 */
-/*!******************************************!*\
-  !*** ./src/js/sampleHead/sampleHead.css ***!
-  \******************************************/
+/* 153 */
+/*!***************************************!*\
+  !*** ./src/js/login/loginContent.css ***!
+  \***************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./sampleHead.css */ 150);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./loginContent.css */ 154);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38216,8 +38501,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!./sampleHead.css", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!./sampleHead.css");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./loginContent.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./loginContent.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -38227,10 +38512,10 @@
 	}
 
 /***/ }),
-/* 150 */
-/*!*********************************************************!*\
-  !*** ./~/css-loader!./src/js/sampleHead/sampleHead.css ***!
-  \*********************************************************/
+/* 154 */
+/*!******************************************************!*\
+  !*** ./~/css-loader!./src/js/login/loginContent.css ***!
+  \******************************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
@@ -38238,7 +38523,123 @@
 	
 	
 	// module
-	exports.push([module.id, ".sample-head-container-div{\r\n    width: 100%;\r\n    height: 100px;\r\n    background-color:#434e5c;\r\n}\r\n.sample-head-inner-div{\r\n    width: 100%;\r\n    max-width: 1024px;\r\n    margin: 0 auto;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: center;\r\n    height:inherit;\r\n}\r\n.sample-head-log-div{\r\n    font-size: 40px;\r\n    color: white;\r\n}\r\n.sample-head-log-div sub{\r\n    margin-left: 10px;\r\n    font-size:26px;\r\n}\r\n.sample-head-menu-div{\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    margin-left: 40px;\r\n}\r\n.sample-head-menu-div a{\r\n    margin: 0 10px;\r\n    color: white;\r\n    text-decoration: none;\r\n}", ""]);
+	exports.push([module.id, ".login-box-container-div{\r\n    border: 1px solid #cccccc;\r\n    border-radius: 6px;\r\n    width: 340px;\r\n    height: 400px;\r\n}\r\n.login-box-container-div h2{\r\n    text-align:center;\r\n    color:#434e5c;\r\n    margin-top: 20px;\r\n    font-size: 30px;\r\n}\r\n.login-box-container-div h2 sub{\r\n    margin-left: 10px;\r\n    font-size: 16px;\r\n}\r\n.input-line-site-div{\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 20px 0;\r\n}\r\n.login-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color: #fd4733;\r\n    line-height: 40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    margin-top: 40px;\r\n}\r\n.login-button:hover{\r\n    background-color: white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n\r\n@media (min-height:820px) {\r\n    .login-big-container .foot-div{\r\n        position: fixed;\r\n        bottom: 0px;\r\n    }\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 155 */,
+/* 156 */
+/*!************************************!*\
+  !*** ./src/js/login/img/login.png ***!
+  \************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "713a573e566fe4dc508d70ab2d2c31a5.png";
+
+/***/ }),
+/* 157 */
+/*!***************************************!*\
+  !*** ./src/js/tool/inputComponent.js ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/tool/inputComponent.css */ 158);
+	
+	var InputLabel = (function (_Component) {
+	    _inherits(InputLabel, _Component);
+	
+	    function InputLabel() {
+	        _classCallCheck(this, InputLabel);
+	
+	        _get(Object.getPrototypeOf(InputLabel.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(InputLabel, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "input-line-div" },
+	                _react2["default"].createElement(
+	                    "p",
+	                    { className: "input-label-div" },
+	                    this.props.labelText
+	                ),
+	                _react2["default"].createElement("input", { className: "input-style-dom", type: this.props.type, placeholder: this.props.placeHolder }),
+	                _react2["default"].createElement("div", { className: "input-notice-div" })
+	            );
+	        }
+	    }]);
+	
+	    return InputLabel;
+	})(_react.Component);
+	
+	exports.InputLabel = InputLabel;
+
+/***/ }),
+/* 158 */
+/*!****************************************!*\
+  !*** ./src/js/tool/inputComponent.css ***!
+  \****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./inputComponent.css */ 159);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./inputComponent.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./inputComponent.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 159 */
+/*!*******************************************************!*\
+  !*** ./~/css-loader!./src/js/tool/inputComponent.css ***!
+  \*******************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".input-label-div{\r\n    font-size: 16px;\r\n    color: #434e5c;\r\n    line-height: 30px\r\n;\r\n}\r\n.input-line-div{\r\n    width: 80%;\r\n}\r\n.input-style-dom{\r\n    width: 100%;\r\n    height: 36px;\r\n    line-height: 36px;\r\n    padding: 0 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    border-radius: 4px;\r\n    font-size: 16px;\r\n    color: #434e5c;\r\n}\r\n.input-style-dom:focus{\r\n    border-color:#434e5c;\r\n}", ""]);
 	
 	// exports
 
