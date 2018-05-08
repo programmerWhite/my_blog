@@ -33,7 +33,7 @@ class ImgBox extends Component{
             </div>
             <div className="title-line-div">
                 <span>描述：</span>
-                <textarea className="img-box-desc-text-area" defaultValue={this.state.boxDataOne.title?this.state.boxDataOne.title:""}></textarea>
+                <textarea className="img-box-desc-text-area" defaultValue={this.state.boxDataOne.desc?this.state.boxDataOne.desc:""}></textarea>
             </div>
             <div className="title-line-div">
                 <span className="edit-this-box"></span>

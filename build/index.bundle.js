@@ -38923,7 +38923,7 @@
 	                        null,
 	                        "描述："
 	                    ),
-	                    _react2["default"].createElement("textarea", { className: "img-box-desc-text-area", defaultValue: this.state.boxDataOne.title ? this.state.boxDataOne.title : "" })
+	                    _react2["default"].createElement("textarea", { className: "img-box-desc-text-area", defaultValue: this.state.boxDataOne.desc ? this.state.boxDataOne.desc : "" })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
