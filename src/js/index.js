@@ -8,6 +8,7 @@ import Blog from "common/js/blog/blog";
 import ContractMe from "common/js/contractMe/contractMe";
 import Live from "common/js/myLive/myLive";
 import Login from "common/js/login/login";
+import UpLoadImg from "common/js/upLoadImg/upLoadImg";
 
 ReactDOM.render(
     (<Router>
@@ -18,6 +19,7 @@ ReactDOM.render(
                 <Route path="/blog" component={Blog} />
                 <Route path="/contract" component={ContractMe} />
                 <Route path="/login" component={Login} />
+                <Route path="/upLoadImg" component={UpLoadImg} />
             </Switch>
         </div>
     </Router>),

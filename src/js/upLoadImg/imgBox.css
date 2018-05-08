@@ -1,0 +1,16 @@
+.box-one-obj-div{
+    border:1px solid #cccccc;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 30%;
+}
+.img-box-content-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-img-one-div{
+    width:25%;
+}
+.box-img-one-div img{
+    width: 100%;
+}
