@@ -36,29 +36,26 @@ class ImgBox extends Component{
         var boxId = e.target.getAttribute("data-id");
 
         $('.input-file-style').off().on("change",function(e) {
-            var fr = new FileReader();
-            fr.onload = function(){
-                console.log(fr.result);
 
-                var formdata = new FormData();
-                formdata.append('file',fr.result);
-                formdata.append('boxId',boxId);
-                $.ajax({
-                    url: IP_ADDRESS+"/upLoadImg",
-                    type: "post",
-                    data: formdata,
-                    contentType: false,
-                    processData: false,
-                    mimeType: "multipart/form-data",
-                    success: function (data) {
-                        console.log(data);
-                    },
-                    error: function (err) {
-                        console.log(err);
-                    }
-                });
+/*-----------------------------*/
+            var formdata = new FormData();
+            formdata.append('file',e.target.files[0]);
+            formdata.append('boxId',boxId);
+
+            // 定义 xhr
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', IP_ADDRESS+"/upLoadImg");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var result = xhr.responseText;
+                    console.log(result);
+                    console.log(xhr)
+                }
             }
-            fr.readAsArrayBuffer(e.target.files[0]);
+            // 发送请求
+            xhr.send(formdata);
+/*-----------------------------*/
+
         });
 
         $('.input-file-style').click();
@@ -69,25 +66,29 @@ class ImgBox extends Component{
         return (<div className="box-one-obj-div">
             <div className="title-line-div">
                 <p className="label-text-p">标题：</p>
-                <input type="text" className="img-box-title-input" defaultValue={this.state.boxDataOne.title?this.state.boxDataOne.title:""}></input>
+                <input type="text" className="img-box-title-input" defaultValue={this.state.boxDataOne?this.state.boxDataOne.title:""}></input>
             </div>
             <div className="img-box-content-div">
                 {
+                    this.state.boxDataOne?
                     this.state.boxDataOne.imgData.map((imgUrl,index)=>{
                        return (<ImgObj imgUrl={imgUrl} key={index}/>)
-                    })
+                    }):""
                 }
-                <BlankImgObj callBack={this.addNewImg.bind(this)} data-id={this.state.boxDataOne.id}/>
+                {
+                    this.state.boxDataOne?<BlankImgObj callBack={this.addNewImg.bind(this)} data-id={this.state.boxDataOne.id}/>:<BlankImgObj callBack={this.addNewImg.bind(this)} data-id="0"/>
+                }
+
             </div>
             <div className="title-line-div">
                 <p className="label-text-p">描述：</p>
-                <textarea className="img-box-desc-text-area" defaultValue={this.state.boxDataOne.desc?this.state.boxDataOne.desc:""}></textarea>
+                <textarea className="img-box-desc-text-area" defaultValue={this.state.boxDataOne?this.state.boxDataOne.desc:""}></textarea>
             </div>
             <div className="title-line-div">
-                <span className="label-text-p">时间：{this.state.boxDataOne.date}</span>
+                <span className="label-text-p">时间：{this.state.boxDataOne?this.state.boxDataOne.date:""}</span>
             </div>
             <div className="title-line-div">
-                <div className="modify-img-box-button">修改</div>
+                <div className="modify-img-box-button" data-id={this.state.boxDataOne?this.state.boxDataOne.id:0}>修改</div>
             </div>
         </div>);
     }

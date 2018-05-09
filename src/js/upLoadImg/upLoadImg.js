@@ -64,6 +64,7 @@ class UpLoadImg extends Component{
                                    return (<ImgBox imgData={imgDataV} key={index} />);
                                 })
                             }
+                            <ImgBox  />
                         </div>
 
                     </div>
