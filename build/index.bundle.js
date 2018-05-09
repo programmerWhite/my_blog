@@ -73,17 +73,19 @@
 	
 	var _commonJsContractMeContractMe2 = _interopRequireDefault(_commonJsContractMeContractMe);
 	
-	var _commonJsMyLiveMyLive = __webpack_require__(/*! common/js/myLive/myLive */ 150);
+	var _commonJsMyLiveMyLive = __webpack_require__(/*! common/js/myLive/myLive */ 151);
 	
 	var _commonJsMyLiveMyLive2 = _interopRequireDefault(_commonJsMyLiveMyLive);
 	
-	var _commonJsLoginLogin = __webpack_require__(/*! common/js/login/login */ 138);
+	var _commonJsLoginLogin = __webpack_require__(/*! common/js/login/login */ 139);
 	
 	var _commonJsLoginLogin2 = _interopRequireDefault(_commonJsLoginLogin);
 	
-	var _commonJsUpLoadImgUpLoadImg = __webpack_require__(/*! common/js/upLoadImg/upLoadImg */ 159);
+	var _commonJsUpLoadImgUpLoadImg = __webpack_require__(/*! common/js/upLoadImg/upLoadImg */ 163);
 	
 	var _commonJsUpLoadImgUpLoadImg2 = _interopRequireDefault(_commonJsUpLoadImgUpLoadImg);
+	
+	var IP_ADDRESS = "localhost:18080";
 	
 	_reactDom2['default'].render(_react2['default'].createElement(
 	    _reactRouterDom.HashRouter,
@@ -26057,37 +26059,38 @@
 		"./js/home/img/liveImg/9.jpg": 136,
 		"./js/home/img/myPhoto.png": 76,
 		"./js/home/img/skills.jpg": 80,
-		"./js/login/img/login.png": 137,
-		"./js/login/login": 138,
-		"./js/login/login.css": 139,
-		"./js/login/login.js": 138,
-		"./js/login/loginContent": 141,
-		"./js/login/loginContent.css": 142,
-		"./js/login/loginContent.js": 141,
-		"./js/myLive/fullScroll": 147,
-		"./js/myLive/fullScroll.css": 148,
-		"./js/myLive/fullScroll.js": 147,
-		"./js/myLive/myLive": 150,
-		"./js/myLive/myLive.css": 151,
-		"./js/myLive/myLive.js": 150,
-		"./js/myLive/myLiveContent": 153,
-		"./js/myLive/myLiveContent.css": 154,
-		"./js/myLive/myLiveContent.js": 153,
-		"./js/myLive/waterFall": 156,
-		"./js/myLive/waterFall.css": 157,
-		"./js/myLive/waterFall.js": 156,
+		"./js/login/img/9ed12a01c94cc423939bf017cfdf0fef_01e8c258a127dea801219c77448492.jpg": 137,
+		"./js/login/img/login.png": 138,
+		"./js/login/login": 139,
+		"./js/login/login.css": 140,
+		"./js/login/login.js": 139,
+		"./js/login/loginContent": 142,
+		"./js/login/loginContent.css": 143,
+		"./js/login/loginContent.js": 142,
+		"./js/myLive/fullScroll": 148,
+		"./js/myLive/fullScroll.css": 149,
+		"./js/myLive/fullScroll.js": 148,
+		"./js/myLive/myLive": 151,
+		"./js/myLive/myLive.css": 152,
+		"./js/myLive/myLive.js": 151,
+		"./js/myLive/myLiveContent": 154,
+		"./js/myLive/myLiveContent.css": 155,
+		"./js/myLive/myLiveContent.js": 154,
+		"./js/myLive/waterFall": 157,
+		"./js/myLive/waterFall.css": 158,
+		"./js/myLive/waterFall.js": 157,
 		"./js/sampleHead/sampleHead": 109,
 		"./js/sampleHead/sampleHead.css": 110,
 		"./js/sampleHead/sampleHead.js": 109,
-		"./js/tool/inputComponent": 144,
-		"./js/tool/inputComponent.css": 145,
-		"./js/tool/inputComponent.js": 144,
-		"./js/upLoadImg/imgBox": 162,
-		"./js/upLoadImg/imgBox.css": 163,
-		"./js/upLoadImg/imgBox.js": 162,
-		"./js/upLoadImg/upLoadImg": 159,
-		"./js/upLoadImg/upLoadImg.css": 160,
-		"./js/upLoadImg/upLoadImg.js": 159
+		"./js/tool/inputComponent": 145,
+		"./js/tool/inputComponent.css": 146,
+		"./js/tool/inputComponent.js": 145,
+		"./js/upLoadImg/imgBox": 160,
+		"./js/upLoadImg/imgBox.css": 161,
+		"./js/upLoadImg/imgBox.js": 160,
+		"./js/upLoadImg/upLoadImg": 163,
+		"./js/upLoadImg/upLoadImg.css": 164,
+		"./js/upLoadImg/upLoadImg.js": 163
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -37523,6 +37526,15 @@
 
 /***/ }),
 /* 137 */
+/*!**********************************************************************************************!*\
+  !*** ./src/js/login/img/9ed12a01c94cc423939bf017cfdf0fef_01e8c258a127dea801219c77448492.jpg ***!
+  \**********************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "2c94e0a9b7c75e7266c570ab9e3b8ee6.jpg";
+
+/***/ }),
+/* 138 */
 /*!************************************!*\
   !*** ./src/js/login/img/login.png ***!
   \************************************/
@@ -37531,7 +37543,7 @@
 	module.exports = __webpack_require__.p + "713a573e566fe4dc508d70ab2d2c31a5.png";
 
 /***/ }),
-/* 138 */
+/* 139 */
 /*!*******************************!*\
   !*** ./src/js/login/login.js ***!
   \*******************************/
@@ -37557,13 +37569,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/login/login.css */ 139);
+	__webpack_require__(/*! common/js/login/login.css */ 140);
 	
 	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
 	
 	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
-	var _commonJsLoginLoginContent = __webpack_require__(/*! common/js/login/loginContent */ 141);
+	var _commonJsLoginLoginContent = __webpack_require__(/*! common/js/login/loginContent */ 142);
 	
 	var _commonJsLoginLoginContent2 = _interopRequireDefault(_commonJsLoginLoginContent);
 	
@@ -37596,7 +37608,7 @@
 	                        _react2['default'].createElement(
 	                            'div',
 	                            { className: 'login-img-div' },
-	                            _react2['default'].createElement('img', { src: __webpack_require__(/*! common/js/login/img/login.png */ 137) })
+	                            _react2['default'].createElement('img', { src: __webpack_require__(/*! common/js/login/img/login.png */ 138) })
 	                        ),
 	                        _react2['default'].createElement(
 	                            'div',
@@ -37617,7 +37629,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 139 */
+/* 140 */
 /*!********************************!*\
   !*** ./src/js/login/login.css ***!
   \********************************/
@@ -37626,7 +37638,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./login.css */ 140);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./login.css */ 141);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37646,7 +37658,7 @@
 	}
 
 /***/ }),
-/* 140 */
+/* 141 */
 /*!***********************************************!*\
   !*** ./~/css-loader!./src/js/login/login.css ***!
   \***********************************************/
@@ -37663,7 +37675,7 @@
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /*!**************************************!*\
   !*** ./src/js/login/loginContent.js ***!
   \**************************************/
@@ -37689,9 +37701,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/login/loginContent.css */ 142);
+	__webpack_require__(/*! common/js/login/loginContent.css */ 143);
 	
-	var _commonJsToolInputComponent = __webpack_require__(/*! common/js/tool/inputComponent */ 144);
+	var _commonJsToolInputComponent = __webpack_require__(/*! common/js/tool/inputComponent */ 145);
 	
 	var LoginContent = (function (_Component) {
 	    _inherits(LoginContent, _Component);
@@ -37774,7 +37786,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 142 */
+/* 143 */
 /*!***************************************!*\
   !*** ./src/js/login/loginContent.css ***!
   \***************************************/
@@ -37783,7 +37795,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./loginContent.css */ 143);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./loginContent.css */ 144);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37803,7 +37815,7 @@
 	}
 
 /***/ }),
-/* 143 */
+/* 144 */
 /*!******************************************************!*\
   !*** ./~/css-loader!./src/js/login/loginContent.css ***!
   \******************************************************/
@@ -37820,7 +37832,7 @@
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /*!***************************************!*\
   !*** ./src/js/tool/inputComponent.js ***!
   \***************************************/
@@ -37846,7 +37858,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/tool/inputComponent.css */ 145);
+	__webpack_require__(/*! common/js/tool/inputComponent.css */ 146);
 	
 	var InputLabel = (function (_Component) {
 	    _inherits(InputLabel, _Component);
@@ -37884,7 +37896,7 @@
 	exports.InputLabel = InputLabel;
 
 /***/ }),
-/* 145 */
+/* 146 */
 /*!****************************************!*\
   !*** ./src/js/tool/inputComponent.css ***!
   \****************************************/
@@ -37893,7 +37905,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./inputComponent.css */ 146);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./inputComponent.css */ 147);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -37913,7 +37925,7 @@
 	}
 
 /***/ }),
-/* 146 */
+/* 147 */
 /*!*******************************************************!*\
   !*** ./~/css-loader!./src/js/tool/inputComponent.css ***!
   \*******************************************************/
@@ -37930,7 +37942,7 @@
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /*!*************************************!*\
   !*** ./src/js/myLive/fullScroll.js ***!
   \*************************************/
@@ -37956,7 +37968,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/fullScroll.css */ 148);
+	__webpack_require__(/*! common/js/myLive/fullScroll.css */ 149);
 	
 	var BoxOneImg = (function (_Component) {
 	    _inherits(BoxOneImg, _Component);
@@ -38212,7 +38224,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 148 */
+/* 149 */
 /*!**************************************!*\
   !*** ./src/js/myLive/fullScroll.css ***!
   \**************************************/
@@ -38221,7 +38233,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./fullScroll.css */ 149);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./fullScroll.css */ 150);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38241,7 +38253,7 @@
 	}
 
 /***/ }),
-/* 149 */
+/* 150 */
 /*!*****************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/fullScroll.css ***!
   \*****************************************************/
@@ -38258,7 +38270,7 @@
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /*!*********************************!*\
   !*** ./src/js/myLive/myLive.js ***!
   \*********************************/
@@ -38288,7 +38300,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	__webpack_require__(/*! common/js/myLive/myLive.css */ 151);
+	__webpack_require__(/*! common/js/myLive/myLive.css */ 152);
 	
 	__webpack_require__(/*! common/css/common.css */ 107);
 	
@@ -38296,7 +38308,7 @@
 	
 	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
 	
-	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 153);
+	var _commonJsMyLiveMyLiveContent = __webpack_require__(/*! common/js/myLive/myLiveContent */ 154);
 	
 	var _commonJsMyLiveMyLiveContent2 = _interopRequireDefault(_commonJsMyLiveMyLiveContent);
 	
@@ -38338,7 +38350,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 151 */
+/* 152 */
 /*!**********************************!*\
   !*** ./src/js/myLive/myLive.css ***!
   \**********************************/
@@ -38347,7 +38359,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./myLive.css */ 152);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLive.css */ 153);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38367,7 +38379,7 @@
 	}
 
 /***/ }),
-/* 152 */
+/* 153 */
 /*!*************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/myLive.css ***!
   \*************************************************/
@@ -38384,7 +38396,7 @@
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /*!****************************************!*\
   !*** ./src/js/myLive/myLiveContent.js ***!
   \****************************************/
@@ -38410,15 +38422,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/myLiveContent.css */ 154);
+	__webpack_require__(/*! common/js/myLive/myLiveContent.css */ 155);
 	
 	__webpack_require__(/*! common/icon/iconfont.css */ 82);
 	
-	var _commonJsMyLiveFullScroll = __webpack_require__(/*! common/js/myLive/fullScroll */ 147);
+	var _commonJsMyLiveFullScroll = __webpack_require__(/*! common/js/myLive/fullScroll */ 148);
 	
 	var _commonJsMyLiveFullScroll2 = _interopRequireDefault(_commonJsMyLiveFullScroll);
 	
-	var _commonJsMyLiveWaterFall = __webpack_require__(/*! common/js/myLive/waterFall */ 156);
+	var _commonJsMyLiveWaterFall = __webpack_require__(/*! common/js/myLive/waterFall */ 157);
 	
 	var _commonJsMyLiveWaterFall2 = _interopRequireDefault(_commonJsMyLiveWaterFall);
 	
@@ -38454,7 +38466,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 154 */
+/* 155 */
 /*!*****************************************!*\
   !*** ./src/js/myLive/myLiveContent.css ***!
   \*****************************************/
@@ -38463,7 +38475,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./myLiveContent.css */ 155);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./myLiveContent.css */ 156);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38483,7 +38495,7 @@
 	}
 
 /***/ }),
-/* 155 */
+/* 156 */
 /*!********************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/myLiveContent.css ***!
   \********************************************************/
@@ -38500,7 +38512,7 @@
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /*!************************************!*\
   !*** ./src/js/myLive/waterFall.js ***!
   \************************************/
@@ -38526,7 +38538,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/myLive/waterFall.css */ 157);
+	__webpack_require__(/*! common/js/myLive/waterFall.css */ 158);
 	
 	var WaterFallImgDiv = (function (_Component) {
 	    _inherits(WaterFallImgDiv, _Component);
@@ -38639,7 +38651,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 157 */
+/* 158 */
 /*!*************************************!*\
   !*** ./src/js/myLive/waterFall.css ***!
   \*************************************/
@@ -38648,7 +38660,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./waterFall.css */ 158);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./waterFall.css */ 159);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38668,7 +38680,7 @@
 	}
 
 /***/ }),
-/* 158 */
+/* 159 */
 /*!****************************************************!*\
   !*** ./~/css-loader!./src/js/myLive/waterFall.css ***!
   \****************************************************/
@@ -38685,151 +38697,7 @@
 
 
 /***/ }),
-/* 159 */
-/*!***************************************!*\
-  !*** ./src/js/upLoadImg/upLoadImg.js ***!
-  \***************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	__webpack_require__(/*! common/js/upLoadImg/upLoadImg.css */ 160);
-	
-	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
-	
-	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
-	
-	var _commonJsUpLoadImgImgBox = __webpack_require__(/*! common/js/upLoadImg/imgBox */ 162);
-	
-	var _commonJsUpLoadImgImgBox2 = _interopRequireDefault(_commonJsUpLoadImgImgBox);
-	
-	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 115);
-	
-	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
-	
-	var UpLoadImg = (function (_Component) {
-	    _inherits(UpLoadImg, _Component);
-	
-	    function UpLoadImg() {
-	        _classCallCheck(this, UpLoadImg);
-	
-	        _get(Object.getPrototypeOf(UpLoadImg.prototype), 'constructor', this).call(this);
-	
-	        this.data = {
-	            imgArray: [{
-	                id: 1,
-	                title: "巴黎是艺术家的圣地",
-	                desc: "巴黎一直以来都是一个时尚胜地，无数的时尚达人在这里汇聚，讨论着下一季整个世界的流行趋势。那是什么让巴黎有那么多的时尚达人呢，就是因为巴黎的文化底蕴给了人们很多的灵感。谁说一定要去看埃菲尔铁塔和凯旋门，在巴黎来次博物馆之旅也不错啊～",
-	                imgData: ['http://dingyue.nosdn.127.net/0N1bQ8k3LIM41XnDXzPIpsNOfGExYKOSTp7Zse6YyUywO1496481577019compressflag.jpg', 'http://dingyue.nosdn.127.net/Fru5YnVK=CzN4Qb3Bw6AHZ3755OF8n5WPJFiYrM8cn7D=1496481577020compressflag.jpg', 'http://dingyue.nosdn.127.net/FQlQXpjVePhAF3r14mTILENNJcinrX8fZY5HYJZyJrcdb1496481577020.jpg', 'http://dingyue.nosdn.127.net/8sAT=UBn2Id5YA=EpN1lDr4oySsKKOGhcjQA20mF8Pm2V1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/76QsIsLP3m5mam1qKbfkSKUfeM2MXTOwXdQRahKkQfc1W1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/IxjWbBiuq4PuwCcRP85HYBUHGQcWgW8vFy8J81reDOlzj1496481577022compressflag.png', 'http://dingyue.nosdn.127.net/EoCMZ59uStWgnxURUEM6rKYPmwog62qMz5bJL7G5FmLnJ1496481577022compressflag.jpg']
-	            }, {
-	                id: 2,
-	                title: "走进活色生香的中央巴刹",
-	                desc: "  每到一个城市，除了这个城市的风景，最能体现当地老百姓生活的，当属当地的菜市场，一方水土，一方菜式，一方人情，在这个五味杂陈的地方，新鲜的蔬果、生鲜，熟悉或陌生的农夫口音，总觉得在他们嘴里说出来的生活更生动更直接，也更能打动我。所以要想了解当地人的生活，菜市场是一定要来逛一逛走一走的。",
-	                imgData: ['http://img2.ph.126.net/c8rjvOXl6yCxMbjpaK2P1A==/6632601584420614763.jpg', 'http://img0.ph.126.net/iPxiBLT2ctppmPjl_y3wVg==/6632332204071813717.jpg', 'http://img0.ph.126.net/FNuB3vR4m28ZPplNTWde1Q==/6632084813958232902.jpg', 'http://img0.ph.126.net/sG4qcRyc-QJb1eoIMtr6iQ==/6632497130815972269.jpg', 'http://img0.ph.126.net/ak3SKi7S4p6eSIxP7KY2dg==/6632188168051240644.jpg', 'http://img2.ph.126.net/jwteUaRKbrNXyTEG3kPHiA==/6632455349374119269.jpg', 'http://img1.ph.126.net/A6TFUEwIFOkvtxXwvB_Cug==/6632045231539636627.jpg']
-	            }]
-	        };
-	
-	        this.state = {
-	            imgDataV: this.data.imgArray
-	        };
-	    }
-	
-	    _createClass(UpLoadImg, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2['default'].createElement(
-	                'div',
-	                { className: 'up-load-img-container-div' },
-	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'up-img-content-div' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'img-box-container-div' },
-	                        this.state.imgDataV.map(function (imgDataV, index) {
-	                            console.log(imgDataV);
-	                            return _react2['default'].createElement(_commonJsUpLoadImgImgBox2['default'], { imgData: imgDataV, key: index });
-	                        })
-	                    )
-	                ),
-	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
-	            );
-	        }
-	    }]);
-	
-	    return UpLoadImg;
-	})(_react.Component);
-	
-	exports['default'] = UpLoadImg;
-	module.exports = exports['default'];
-
-/***/ }),
 /* 160 */
-/*!****************************************!*\
-  !*** ./src/js/upLoadImg/upLoadImg.css ***!
-  \****************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./upLoadImg.css */ 161);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!./upLoadImg.css", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!./upLoadImg.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ }),
-/* 161 */
-/*!*******************************************************!*\
-  !*** ./~/css-loader!./src/js/upLoadImg/upLoadImg.css ***!
-  \*******************************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".img-box-container-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    max-width: 1160px;\r\n    margin:0 auto;\r\n}", ""]);
-	
-	// exports
-
-
-/***/ }),
-/* 162 */
 /*!************************************!*\
   !*** ./src/js/upLoadImg/imgBox.js ***!
   \************************************/
@@ -38855,7 +38723,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	__webpack_require__(/*! common/js/upLoadImg/imgBox.css */ 163);
+	var _jquery = __webpack_require__(/*! jquery */ 104);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	__webpack_require__(/*! common/js/upLoadImg/imgBox.css */ 161);
 	
 	var ImgObj = (function (_Component) {
 	    _inherits(ImgObj, _Component);
@@ -38880,8 +38752,38 @@
 	    return ImgObj;
 	})(_react.Component);
 	
-	var ImgBox = (function (_Component2) {
-	    _inherits(ImgBox, _Component2);
+	var BlankImgObj = (function (_Component2) {
+	    _inherits(BlankImgObj, _Component2);
+	
+	    function BlankImgObj(props) {
+	        _classCallCheck(this, BlankImgObj);
+	
+	        _get(Object.getPrototypeOf(BlankImgObj.prototype), "constructor", this).call(this, props);
+	    }
+	
+	    _createClass(BlankImgObj, [{
+	        key: "render",
+	        value: function render() {
+	            var _this = this;
+	
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "box-img-one-div add-img-outer", "data-id": this.props["data-id"], onClick: function (e) {
+	                        _this.props.callBack(e);
+	                    } },
+	                _react2["default"].createElement("span", { className: "add-img-span icon iconfont icon-picture_fill", "data-id": this.props["data-id"] }),
+	                _react2["default"].createElement("span", { className: "add-img-span icon iconfont icon-addition", "data-id": this.props["data-id"] })
+	            );
+	        }
+	    }]);
+	
+	    return BlankImgObj;
+	})(_react.Component);
+	
+	var IP_ADDRESS = "http://localhost:18080";
+	
+	var ImgBox = (function (_Component3) {
+	    _inherits(ImgBox, _Component3);
 	
 	    function ImgBox(props) {
 	        _classCallCheck(this, ImgBox);
@@ -38893,6 +38795,39 @@
 	    }
 	
 	    _createClass(ImgBox, [{
+	        key: "addNewImg",
+	        value: function addNewImg(e) {
+	            var boxId = e.target.getAttribute("data-id");
+	
+	            (0, _jquery2["default"])('.input-file-style').off().on("change", function (e) {
+	                var fr = new FileReader();
+	                fr.onload = function () {
+	                    console.log(fr.result);
+	
+	                    var formdata = new FormData();
+	                    formdata.append('file', fr.result);
+	                    formdata.append('boxId', boxId);
+	                    _jquery2["default"].ajax({
+	                        url: IP_ADDRESS + "/upLoadImg",
+	                        type: "post",
+	                        data: formdata,
+	                        contentType: false,
+	                        processData: false,
+	                        mimeType: "multipart/form-data",
+	                        success: function success(data) {
+	                            console.log(data);
+	                        },
+	                        error: function error(err) {
+	                            console.log(err);
+	                        }
+	                    });
+	                };
+	                fr.readAsArrayBuffer(e.target.files[0]);
+	            });
+	
+	            (0, _jquery2["default"])('.input-file-style').click();
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            return _react2["default"].createElement(
@@ -38902,8 +38837,8 @@
 	                    "div",
 	                    { className: "title-line-div" },
 	                    _react2["default"].createElement(
-	                        "span",
-	                        null,
+	                        "p",
+	                        { className: "label-text-p" },
 	                        "标题："
 	                    ),
 	                    _react2["default"].createElement("input", { type: "text", className: "img-box-title-input", defaultValue: this.state.boxDataOne.title ? this.state.boxDataOne.title : "" })
@@ -38913,14 +38848,15 @@
 	                    { className: "img-box-content-div" },
 	                    this.state.boxDataOne.imgData.map(function (imgUrl, index) {
 	                        return _react2["default"].createElement(ImgObj, { imgUrl: imgUrl, key: index });
-	                    })
+	                    }),
+	                    _react2["default"].createElement(BlankImgObj, { callBack: this.addNewImg.bind(this), "data-id": this.state.boxDataOne.id })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
 	                    { className: "title-line-div" },
 	                    _react2["default"].createElement(
-	                        "span",
-	                        null,
+	                        "p",
+	                        { className: "label-text-p" },
 	                        "描述："
 	                    ),
 	                    _react2["default"].createElement("textarea", { className: "img-box-desc-text-area", defaultValue: this.state.boxDataOne.desc ? this.state.boxDataOne.desc : "" })
@@ -38928,7 +38864,21 @@
 	                _react2["default"].createElement(
 	                    "div",
 	                    { className: "title-line-div" },
-	                    _react2["default"].createElement("span", { className: "edit-this-box" })
+	                    _react2["default"].createElement(
+	                        "span",
+	                        { className: "label-text-p" },
+	                        "时间：",
+	                        this.state.boxDataOne.date
+	                    )
+	                ),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "title-line-div" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "modify-img-box-button" },
+	                        "修改"
+	                    )
 	                )
 	            );
 	        }
@@ -38941,7 +38891,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 163 */
+/* 161 */
 /*!*************************************!*\
   !*** ./src/js/upLoadImg/imgBox.css ***!
   \*************************************/
@@ -38950,7 +38900,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../../~/css-loader!./imgBox.css */ 164);
+	var content = __webpack_require__(/*! !../../../~/css-loader!./imgBox.css */ 162);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
@@ -38970,7 +38920,7 @@
 	}
 
 /***/ }),
-/* 164 */
+/* 162 */
 /*!****************************************************!*\
   !*** ./~/css-loader!./src/js/upLoadImg/imgBox.css ***!
   \****************************************************/
@@ -38981,7 +38931,153 @@
 	
 	
 	// module
-	exports.push([module.id, ".box-one-obj-div{\r\n    border:1px solid #cccccc;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    width: 30%;\r\n}\r\n.img-box-content-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.box-img-one-div{\r\n    width:25%;\r\n}\r\n.box-img-one-div img{\r\n    width: 100%;\r\n}", ""]);
+	exports.push([module.id, ".box-one-obj-div{\r\n    border:1px solid #cccccc;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    width: 30%;\r\n    margin:10px;\r\n}\r\n.img-box-content-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 10px 0;\r\n    box-sizing: border-box;\r\n    justify-content: space-between;\r\n}\r\n.box-img-one-div{\r\n    width:30%;\r\n}\r\n.box-img-one-div img{\r\n    width: 100%;\r\n    margin-bottom: 4px;\r\n}\r\n.img-box-title-input{\r\n    width: 100%;\r\n    padding: 0 10px;\r\n    height: 30px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    border: 1px solid #cccccc;\r\n}\r\n.img-box-desc-text-area{\r\n    width:100%;\r\n    height:140px;\r\n    resize:none;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    font-size:12px;\r\n}\r\n.label-text-p{\r\n    font-size: 14px;\r\n    line-height: 30px;\r\n}\r\n\r\n.modify-img-box-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color: #fd4733;\r\n    line-height: 40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    margin-top: 20px;\r\n}\r\n.modify-img-box-button:hover{\r\n    background-color: white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.add-img-outer{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border:1px solid #cccccc;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.add-img-outer:hover span{\r\n    color: #333333;\r\n}\r\n.add-img-span{\r\n    line-height: 100%;\r\n    text-align:center;\r\n    font-size: 40px;\r\n    color: #cccccc;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 163 */
+/*!***************************************!*\
+  !*** ./src/js/upLoadImg/upLoadImg.js ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! common/js/upLoadImg/upLoadImg.css */ 164);
+	
+	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
+	
+	var _commonJsSampleHeadSampleHead2 = _interopRequireDefault(_commonJsSampleHeadSampleHead);
+	
+	var _commonJsUpLoadImgImgBox = __webpack_require__(/*! common/js/upLoadImg/imgBox */ 160);
+	
+	var _commonJsUpLoadImgImgBox2 = _interopRequireDefault(_commonJsUpLoadImgImgBox);
+	
+	var _commonJsFootFoot = __webpack_require__(/*! common/js/foot/foot */ 115);
+	
+	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
+	
+	var UpLoadImg = (function (_Component) {
+	    _inherits(UpLoadImg, _Component);
+	
+	    function UpLoadImg() {
+	        _classCallCheck(this, UpLoadImg);
+	
+	        _get(Object.getPrototypeOf(UpLoadImg.prototype), 'constructor', this).call(this);
+	
+	        this.data = {
+	            imgArray: [{
+	                id: 1,
+	                date: "2018-05-24",
+	                title: "巴黎是艺术家的圣地",
+	                desc: "巴黎一直以来都是一个时尚胜地，无数的时尚达人在这里汇聚，讨论着下一季整个世界的流行趋势。那是什么让巴黎有那么多的时尚达人呢，就是因为巴黎的文化底蕴给了人们很多的灵感。谁说一定要去看埃菲尔铁塔和凯旋门，在巴黎来次博物馆之旅也不错啊～",
+	                imgData: ['http://dingyue.nosdn.127.net/0N1bQ8k3LIM41XnDXzPIpsNOfGExYKOSTp7Zse6YyUywO1496481577019compressflag.jpg', 'http://dingyue.nosdn.127.net/Fru5YnVK=CzN4Qb3Bw6AHZ3755OF8n5WPJFiYrM8cn7D=1496481577020compressflag.jpg', 'http://dingyue.nosdn.127.net/FQlQXpjVePhAF3r14mTILENNJcinrX8fZY5HYJZyJrcdb1496481577020.jpg', 'http://dingyue.nosdn.127.net/8sAT=UBn2Id5YA=EpN1lDr4oySsKKOGhcjQA20mF8Pm2V1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/76QsIsLP3m5mam1qKbfkSKUfeM2MXTOwXdQRahKkQfc1W1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/IxjWbBiuq4PuwCcRP85HYBUHGQcWgW8vFy8J81reDOlzj1496481577022compressflag.png', 'http://dingyue.nosdn.127.net/EoCMZ59uStWgnxURUEM6rKYPmwog62qMz5bJL7G5FmLnJ1496481577022compressflag.jpg']
+	            }, {
+	                id: 2,
+	                date: "2018-05-22",
+	                title: "走进活色生香的中央巴刹",
+	                desc: "  每到一个城市，除了这个城市的风景，最能体现当地老百姓生活的，当属当地的菜市场，一方水土，一方菜式，一方人情，在这个五味杂陈的地方，新鲜的蔬果、生鲜，熟悉或陌生的农夫口音，总觉得在他们嘴里说出来的生活更生动更直接，也更能打动我。所以要想了解当地人的生活，菜市场是一定要来逛一逛走一走的。",
+	                imgData: ['http://img2.ph.126.net/c8rjvOXl6yCxMbjpaK2P1A==/6632601584420614763.jpg', 'http://img0.ph.126.net/iPxiBLT2ctppmPjl_y3wVg==/6632332204071813717.jpg', 'http://img0.ph.126.net/FNuB3vR4m28ZPplNTWde1Q==/6632084813958232902.jpg', 'http://img0.ph.126.net/sG4qcRyc-QJb1eoIMtr6iQ==/6632497130815972269.jpg', 'http://img0.ph.126.net/ak3SKi7S4p6eSIxP7KY2dg==/6632188168051240644.jpg', 'http://img2.ph.126.net/jwteUaRKbrNXyTEG3kPHiA==/6632455349374119269.jpg', 'http://img1.ph.126.net/A6TFUEwIFOkvtxXwvB_Cug==/6632045231539636627.jpg']
+	            }]
+	        };
+	
+	        this.state = {
+	            imgDataV: this.data.imgArray
+	        };
+	    }
+	
+	    _createClass(UpLoadImg, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'up-load-img-container-div' },
+	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'up-img-content-div' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'img-box-container-div' },
+	                        this.state.imgDataV.map(function (imgDataV, index) {
+	                            return _react2['default'].createElement(_commonJsUpLoadImgImgBox2['default'], { imgData: imgDataV, key: index });
+	                        })
+	                    )
+	                ),
+	                _react2['default'].createElement('input', { type: 'file', className: 'input-file-style' }),
+	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
+	            );
+	        }
+	    }]);
+	
+	    return UpLoadImg;
+	})(_react.Component);
+	
+	exports['default'] = UpLoadImg;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 164 */
+/*!****************************************!*\
+  !*** ./src/js/upLoadImg/upLoadImg.css ***!
+  \****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../../~/css-loader!./upLoadImg.css */ 165);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../../~/style-loader/addStyles.js */ 75)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./upLoadImg.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./upLoadImg.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 165 */
+/*!*******************************************************!*\
+  !*** ./~/css-loader!./src/js/upLoadImg/upLoadImg.css ***!
+  \*******************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 74)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".img-box-container-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    max-width: 1160px;\r\n    margin:0 auto;\r\n}\r\n.input-file-style{\r\n    display: none;\r\n}", ""]);
 	
 	// exports
 

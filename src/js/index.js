@@ -10,6 +10,8 @@ import Live from "common/js/myLive/myLive";
 import Login from "common/js/login/login";
 import UpLoadImg from "common/js/upLoadImg/upLoadImg";
 
+var IP_ADDRESS = "localhost:18080";
+
 ReactDOM.render(
     (<Router>
         <div>
