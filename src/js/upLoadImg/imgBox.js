@@ -30,10 +30,13 @@ class ImgBox extends Component{
         this.state = {
             boxDataOne:this.props.imgData
         }
+        console.log(this.state.boxDataOne)
     }
 
     addNewImg(e){
         var boxId = e.target.getAttribute("data-id");
+
+        var This = this;
 
         $('.input-file-style').off().on("change",function(e) {
 
@@ -42,18 +45,25 @@ class ImgBox extends Component{
             formdata.append('file',e.target.files[0]);
             formdata.append('boxId',boxId);
 
-            // 定义 xhr
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', IP_ADDRESS+"/upLoadImg");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    var result = xhr.responseText;
-                    console.log(result);
-                    console.log(xhr)
+            $.ajax({
+                url:IP_ADDRESS+"/upLoadImg",
+                method:"Post",
+                contentType: false, // 注意这里应设为false
+                processData: false,
+                data:formdata,
+                success:function (data) {
+
+                    var imgDataArray = This.state.boxDataOne;
+                    imgDataArray.imgData.push(data.data[0]);
+
+                    This.setState({
+                        boxDataOne:imgDataArray
+                    });
+                },
+                error:function (err) {
+                    console.log(err)
                 }
-            }
-            // 发送请求
-            xhr.send(formdata);
+            })
 /*-----------------------------*/
 
         });
