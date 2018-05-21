@@ -38800,13 +38800,33 @@
 	            var boxId = e.target.getAttribute("data-id");
 	
 	            (0, _jquery2["default"])('.input-file-style').off().on("change", function (e) {
-	                var fr = new FileReader();
-	                fr.onload = function () {
-	                    console.log(fr.result);
+	                // var fr = new FileReader();
+	                // fr.onload = function(){
+	                // console.log()
+	                // console.log(fr.result);
+	                //
+	                var formdata = new FormData();
+	                //
+	                // var fileData = {
+	                //     fieldName: 'file',
+	                //     originalFilename: e.target.files[0].name,
+	                //     path: e.target.value,
+	                //     headers: fr.result,
+	                //     size: e.target.files[0].size
+	                // };
+	                // console.log(fileData)
+	                // formdata.append('file',fileData);
+	                // formdata.append('boxId',boxId);
 	
-	                    var formdata = new FormData();
-	                    formdata.append('file', fr.result);
+	                // return false;
+	                console.log(e.target.files);
+	                objForEach(e.target.files, function (file) {
+	                    console.log(131223);
+	                    console.log(file);
+	                    formdata.append('file', file);
 	                    formdata.append('boxId', boxId);
+	
+	                    return false;
 	                    _jquery2["default"].ajax({
 	                        url: IP_ADDRESS + "/upLoadImg",
 	                        type: "post",
@@ -38815,14 +38835,16 @@
 	                        processData: false,
 	                        mimeType: "multipart/form-data",
 	                        success: function success(data) {
-	                            console.log(data);
+	                            // console.log(data);
 	                        },
 	                        error: function error(err) {
-	                            console.log(err);
+	                            // console.log(err);
 	                        }
 	                    });
-	                };
-	                fr.readAsArrayBuffer(e.target.files[0]);
+	                });
+	
+	                // }
+	                // fr.readAsArrayBuffer(e.target.files[0]);
 	            });
 	
 	            (0, _jquery2["default"])('.input-file-style').click();
@@ -38888,6 +38910,20 @@
 	})(_react.Component);
 	
 	exports["default"] = ImgBox;
+	
+	// 遍历对象
+	function objForEach(obj, fn) {
+	    var key = void 0,
+	        result = void 0;
+	    for (key in obj) {
+	        if (obj.hasOwnProperty(key)) {
+	            result = fn.call(obj, key, obj[key]);
+	            if (result === false) {
+	                break;
+	            }
+	        }
+	    }
+	}
 	module.exports = exports["default"];
 
 /***/ }),

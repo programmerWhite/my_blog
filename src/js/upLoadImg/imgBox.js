@@ -36,29 +36,52 @@ class ImgBox extends Component{
         var boxId = e.target.getAttribute("data-id");
 
         $('.input-file-style').off().on("change",function(e) {
-            var fr = new FileReader();
-            fr.onload = function(){
-                console.log(fr.result);
-
+            // var fr = new FileReader();
+            // fr.onload = function(){
+                // console.log()
+                // console.log(fr.result);
+                //
                 var formdata = new FormData();
-                formdata.append('file',fr.result);
-                formdata.append('boxId',boxId);
-                $.ajax({
-                    url: IP_ADDRESS+"/upLoadImg",
-                    type: "post",
-                    data: formdata,
-                    contentType: false,
-                    processData: false,
-                    mimeType: "multipart/form-data",
-                    success: function (data) {
-                        console.log(data);
-                    },
-                    error: function (err) {
-                        console.log(err);
-                    }
-                });
-            }
-            fr.readAsArrayBuffer(e.target.files[0]);
+                //
+                // var fileData = {
+                //     fieldName: 'file',
+                //     originalFilename: e.target.files[0].name,
+                //     path: e.target.value,
+                //     headers: fr.result,
+                //     size: e.target.files[0].size
+                // };
+                // console.log(fileData)
+                // formdata.append('file',fileData);
+                // formdata.append('boxId',boxId);
+
+                // return false;
+            console.log(e.target.files)
+                objForEach(e.target.files,function (file) {
+                    console.log(131223)
+                    console.log(file)
+                    formdata.append('file',file);
+                    formdata.append('boxId',boxId);
+
+                    return false;
+                    $.ajax({
+                        url: IP_ADDRESS+"/upLoadImg",
+                        type: "post",
+                        data: formdata,
+                        contentType: false,
+                        processData: false,
+                        mimeType: "multipart/form-data",
+                        success: function (data) {
+                            // console.log(data);
+                        },
+                        error: function (err) {
+                            // console.log(err);
+                        }
+                    });
+                })
+                
+
+            // }
+            // fr.readAsArrayBuffer(e.target.files[0]);
         });
 
         $('.input-file-style').click();
@@ -95,3 +118,18 @@ class ImgBox extends Component{
 
 
 export default ImgBox;
+
+
+// 遍历对象
+function objForEach(obj, fn) {
+    var key = void 0,
+        result = void 0;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result = fn.call(obj, key, obj[key]);
+            if (result === false) {
+                break;
+            }
+        }
+    }
+}
