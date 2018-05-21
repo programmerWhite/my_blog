@@ -1,11 +1,14 @@
 import React,{Component} from 'react';
 import "common/js/upLoadImg/upLoadImg.css";
+import $ from "jquery";
 
 import SampleHead from 'common/js/sampleHead/sampleHead';
 
 import ImgBox from 'common/js/upLoadImg/imgBox';
 
 import Foot from 'common/js/foot/foot';
+
+var IP_ADDRESS = "http://localhost:18080";
 
 class UpLoadImg extends Component{
     constructor(){
@@ -60,6 +63,13 @@ class UpLoadImg extends Component{
             ]
         }
 
+        var boxData = this.getBoxData();
+    }
+
+    getBoxData(){
+        $.post(IP_ADDRESS+'/getBoxData',{},function (data) {
+            console.log(data)
+        })
     }
 
     render(){
