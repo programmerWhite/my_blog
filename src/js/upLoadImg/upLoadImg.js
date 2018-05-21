@@ -50,6 +50,16 @@ class UpLoadImg extends Component{
             imgDataV:this.data.imgArray
         };
 
+        this.emptyData = {
+            id:0,
+            date:"",
+            title:"",
+            desc:" ",
+            imgData:[
+
+            ]
+        }
+
     }
 
     render(){
@@ -64,6 +74,7 @@ class UpLoadImg extends Component{
                                    return (<ImgBox imgData={imgDataV} key={index} />);
                                 })
                             }
+                            <ImgBox  imgData={this.emptyData}/>
                         </div>
 
                     </div>
