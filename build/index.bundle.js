@@ -38794,60 +38794,101 @@
 	        };
 	    }
 	
+	    // 遍历类数组
+	
 	    _createClass(ImgBox, [{
 	        key: "addNewImg",
 	        value: function addNewImg(e) {
 	            var boxId = e.target.getAttribute("data-id");
 	
+	            var This = this;
+	
 	            (0, _jquery2["default"])('.input-file-style').off().on("change", function (e) {
-	                // var fr = new FileReader();
-	                // fr.onload = function(){
-	                // console.log()
-	                // console.log(fr.result);
-	                //
-	                var formdata = new FormData();
-	                //
-	                // var fileData = {
-	                //     fieldName: 'file',
-	                //     originalFilename: e.target.files[0].name,
-	                //     path: e.target.value,
-	                //     headers: fr.result,
-	                //     size: e.target.files[0].size
-	                // };
-	                // console.log(fileData)
-	                // formdata.append('file',fileData);
-	                // formdata.append('boxId',boxId);
 	
-	                // return false;
-	                console.log(e.target.files);
-	                objForEach(e.target.files, function (file) {
-	                    console.log(131223);
-	                    console.log(file);
-	                    formdata.append('file', file);
-	                    formdata.append('boxId', boxId);
+	                var files = e.target.files;
 	
-	                    return false;
-	                    _jquery2["default"].ajax({
-	                        url: IP_ADDRESS + "/upLoadImg",
-	                        type: "post",
-	                        data: formdata,
-	                        contentType: false,
-	                        processData: false,
-	                        mimeType: "multipart/form-data",
-	                        success: function success(data) {
-	                            // console.log(data);
-	                        },
-	                        error: function error(err) {
-	                            // console.log(err);
-	                        }
-	                    });
+	                // ------------------------------ 验证文件信息 ------------------------------
+	                var resultFiles = [];
+	                var errInfo = [];
+	                arrForEach(files, function (file) {
+	                    var name = file.name;
+	                    var size = file.size;
+	
+	                    // chrome 低版本 name === undefined
+	                    if (!name || !size) {
+	                        return;
+	                    }
+	
+	                    if (/\.(jpg|jpeg|png|bmp|gif)$/i.test(name) === false) {
+	                        // 后缀名不合法，不是图片
+	                        errInfo.push("【" + name + "】不是图片");
+	                        return;
+	                    }
+	
+	                    // 验证通过的加入结果列表
+	                    resultFiles.push(file);
 	                });
 	
-	                // }
-	                // fr.readAsArrayBuffer(e.target.files[0]);
+	                // 添加图片数据
+	                var formdata = new FormData();
+	                arrForEach(resultFiles, function (file) {
+	                    formdata.append('file', file);
+	                });
+	
+	                formdata.append('boxId', boxId);
+	
+	                _jquery2["default"].ajax({
+	                    url: IP_ADDRESS + "/upLoadImg",
+	                    method: "Post",
+	                    contentType: false, // 注意这里应设为false
+	                    processData: false,
+	                    data: formdata,
+	                    success: function success(data) {
+	
+	                        var imgDataArray = This.state.boxDataOne;
+	                        imgDataArray.imgData.push(data.data[0]);
+	
+	                        This.setState({
+	                            boxDataOne: imgDataArray
+	                        });
+	                    },
+	                    error: function error(err) {
+	                        console.log(err);
+	                    }
+	                });
 	            });
 	
-	            (0, _jquery2["default"])('.input-file-style').click();
+	            if (boxId != "0") {
+	                (0, _jquery2["default"])('.input-file-style').click();
+	            } else {
+	                alert("请先添加标题和描述");
+	            }
+	        }
+	    }, {
+	        key: "saveBoxTitleAndDesc",
+	        value: function saveBoxTitleAndDesc(e) {
+	            var _title = this.refs.titleText.value;
+	            var _desc = this.refs.boxDesc.value;
+	            var boxId = e.target.getAttribute('data-id');
+	            console.log(_title + "--" + _desc + "--" + boxId);
+	
+	            if (_title == "" || _title == " ") {
+	                alert("标题不能为空");
+	                return false;
+	            }
+	
+	            if (_desc == "" || _desc == " ") {
+	                alert("描述不能为空");
+	                return false;
+	            }
+	
+	            _jquery2["default"].post(IP_ADDRESS + "/operatingBoxText", {
+	                title: _title,
+	                desc: _desc,
+	                boxId: boxId
+	            }, function (data) {
+	                console.log(data);
+	            });
 	        }
 	    }, {
 	        key: "render",
@@ -38863,15 +38904,15 @@
 	                        { className: "label-text-p" },
 	                        "标题："
 	                    ),
-	                    _react2["default"].createElement("input", { type: "text", className: "img-box-title-input", defaultValue: this.state.boxDataOne.title ? this.state.boxDataOne.title : "" })
+	                    _react2["default"].createElement("input", { type: "text", ref: "titleText", className: "img-box-title-input", defaultValue: this.state.boxDataOne ? this.state.boxDataOne.title : "" })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
 	                    { className: "img-box-content-div" },
-	                    this.state.boxDataOne.imgData.map(function (imgUrl, index) {
+	                    this.state.boxDataOne ? this.state.boxDataOne.imgData.map(function (imgUrl, index) {
 	                        return _react2["default"].createElement(ImgObj, { imgUrl: imgUrl, key: index });
-	                    }),
-	                    _react2["default"].createElement(BlankImgObj, { callBack: this.addNewImg.bind(this), "data-id": this.state.boxDataOne.id })
+	                    }) : "",
+	                    this.state.boxDataOne ? _react2["default"].createElement(BlankImgObj, { callBack: this.addNewImg.bind(this), "data-id": this.state.boxDataOne.id }) : _react2["default"].createElement(BlankImgObj, { callBack: this.addNewImg.bind(this), "data-id": "0" })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
@@ -38881,7 +38922,7 @@
 	                        { className: "label-text-p" },
 	                        "描述："
 	                    ),
-	                    _react2["default"].createElement("textarea", { className: "img-box-desc-text-area", defaultValue: this.state.boxDataOne.desc ? this.state.boxDataOne.desc : "" })
+	                    _react2["default"].createElement("textarea", { ref: "boxDesc", className: "img-box-desc-text-area", defaultValue: this.state.boxDataOne ? this.state.boxDataOne.desc : "" })
 	                ),
 	                _react2["default"].createElement(
 	                    "div",
@@ -38890,7 +38931,7 @@
 	                        "span",
 	                        { className: "label-text-p" },
 	                        "时间：",
-	                        this.state.boxDataOne.date
+	                        this.state.boxDataOne ? this.state.boxDataOne.date : ""
 	                    )
 	                ),
 	                _react2["default"].createElement(
@@ -38898,8 +38939,8 @@
 	                    { className: "title-line-div" },
 	                    _react2["default"].createElement(
 	                        "div",
-	                        { className: "modify-img-box-button" },
-	                        "修改"
+	                        { className: "modify-img-box-button", onClick: this.saveBoxTitleAndDesc.bind(this), "data-id": this.state.boxDataOne ? this.state.boxDataOne.id : 0 },
+	                        this.state.boxDataOne.id == 0 ? "添加" : "修改"
 	                    )
 	                )
 	            );
@@ -38909,21 +38950,24 @@
 	    return ImgBox;
 	})(_react.Component);
 	
-	exports["default"] = ImgBox;
-	
-	// 遍历对象
-	function objForEach(obj, fn) {
-	    var key = void 0,
+	function arrForEach(fakeArr, fn) {
+	    var i = void 0,
+	        item = void 0,
 	        result = void 0;
-	    for (key in obj) {
-	        if (obj.hasOwnProperty(key)) {
-	            result = fn.call(obj, key, obj[key]);
-	            if (result === false) {
-	                break;
-	            }
+	    var length = fakeArr.length || 0;
+	
+	    console.log(length);
+	    for (i = 0; i < length; i++) {
+	        item = fakeArr[i];
+	        result = fn.call(fakeArr, item, i);
+	        console.log(result);
+	        if (result === false) {
+	            break;
 	        }
 	    }
 	}
+	
+	exports["default"] = ImgBox;
 	module.exports = exports["default"];
 
 /***/ }),
@@ -38979,27 +39023,31 @@
   \***************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
 	__webpack_require__(/*! common/js/upLoadImg/upLoadImg.css */ 164);
+	
+	var _jquery = __webpack_require__(/*! jquery */ 104);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	var _commonJsSampleHeadSampleHead = __webpack_require__(/*! common/js/sampleHead/sampleHead */ 109);
 	
@@ -39013,13 +39061,15 @@
 	
 	var _commonJsFootFoot2 = _interopRequireDefault(_commonJsFootFoot);
 	
+	var IP_ADDRESS = "http://localhost:18080";
+	
 	var UpLoadImg = (function (_Component) {
 	    _inherits(UpLoadImg, _Component);
 	
 	    function UpLoadImg() {
 	        _classCallCheck(this, UpLoadImg);
 	
-	        _get(Object.getPrototypeOf(UpLoadImg.prototype), 'constructor', this).call(this);
+	        _get(Object.getPrototypeOf(UpLoadImg.prototype), "constructor", this).call(this);
 	
 	        this.data = {
 	            imgArray: [{
@@ -39040,28 +39090,46 @@
 	        this.state = {
 	            imgDataV: this.data.imgArray
 	        };
+	
+	        this.emptyData = {
+	            id: 0,
+	            date: "",
+	            title: "",
+	            desc: " ",
+	            imgData: []
+	        };
+	
+	        var boxData = this.getBoxData();
 	    }
 	
 	    _createClass(UpLoadImg, [{
-	        key: 'render',
+	        key: "getBoxData",
+	        value: function getBoxData() {
+	            _jquery2["default"].post(IP_ADDRESS + '/getBoxData', {}, function (data) {
+	                console.log(data);
+	            });
+	        }
+	    }, {
+	        key: "render",
 	        value: function render() {
-	            return _react2['default'].createElement(
-	                'div',
-	                { className: 'up-load-img-container-div' },
-	                _react2['default'].createElement(_commonJsSampleHeadSampleHead2['default'], null),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'up-img-content-div' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'img-box-container-div' },
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "up-load-img-container-div" },
+	                _react2["default"].createElement(_commonJsSampleHeadSampleHead2["default"], null),
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "up-img-content-div" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "img-box-container-div" },
 	                        this.state.imgDataV.map(function (imgDataV, index) {
-	                            return _react2['default'].createElement(_commonJsUpLoadImgImgBox2['default'], { imgData: imgDataV, key: index });
-	                        })
+	                            return _react2["default"].createElement(_commonJsUpLoadImgImgBox2["default"], { imgData: imgDataV, key: index });
+	                        }),
+	                        _react2["default"].createElement(_commonJsUpLoadImgImgBox2["default"], { imgData: this.emptyData })
 	                    )
 	                ),
-	                _react2['default'].createElement('input', { type: 'file', className: 'input-file-style' }),
-	                _react2['default'].createElement(_commonJsFootFoot2['default'], null)
+	                _react2["default"].createElement("input", { type: "file", className: "input-file-style" }),
+	                _react2["default"].createElement(_commonJsFootFoot2["default"], null)
 	            );
 	        }
 	    }]);
@@ -39069,8 +39137,8 @@
 	    return UpLoadImg;
 	})(_react.Component);
 	
-	exports['default'] = UpLoadImg;
-	module.exports = exports['default'];
+	exports["default"] = UpLoadImg;
+	module.exports = exports["default"];
 
 /***/ }),
 /* 164 */
