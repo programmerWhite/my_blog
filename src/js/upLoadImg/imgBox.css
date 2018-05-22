@@ -75,3 +75,11 @@
     font-size: 40px;
     color: #cccccc;
 }
+
+.delete-box{
+    float:right;
+    cursor:pointer;
+}
+.delete-box:hover{
+    color: #fd4733;
+}

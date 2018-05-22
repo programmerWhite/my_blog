@@ -38838,19 +38838,22 @@
 	                formdata.append('boxId', boxId);
 	
 	                _jquery2["default"].ajax({
-	                    url: IP_ADDRESS + "/upLoadImg",
+	                    url: IP_ADDRESS + "/access/upLoadImg",
 	                    method: "Post",
 	                    contentType: false, // 注意这里应设为false
 	                    processData: false,
 	                    data: formdata,
 	                    success: function success(data) {
+	                        if (data.access == "forbid") {
+	                            location.href = "#/login";
+	                        } else {
+	                            var imgDataArray = This.state.boxDataOne;
+	                            imgDataArray.imgData.push(data.data[0]);
 	
-	                        var imgDataArray = This.state.boxDataOne;
-	                        imgDataArray.imgData.push(data.data[0]);
-	
-	                        This.setState({
-	                            boxDataOne: imgDataArray
-	                        });
+	                            This.setState({
+	                                boxDataOne: imgDataArray
+	                            });
+	                        }
 	                    },
 	                    error: function error(err) {
 	                        console.log(err);
@@ -38867,10 +38870,12 @@
 	    }, {
 	        key: "saveBoxTitleAndDesc",
 	        value: function saveBoxTitleAndDesc(e) {
+	
+	            var This = this;
+	
 	            var _title = this.refs.titleText.value;
 	            var _desc = this.refs.boxDesc.value;
 	            var boxId = e.target.getAttribute('data-id');
-	            console.log(_title + "--" + _desc + "--" + boxId);
 	
 	            if (_title == "" || _title == " ") {
 	                alert("标题不能为空");
@@ -38882,12 +38887,53 @@
 	                return false;
 	            }
 	
-	            _jquery2["default"].post(IP_ADDRESS + "/operatingBoxText", {
+	            _jquery2["default"].post(IP_ADDRESS + "/access/operatingBoxText", {
 	                title: _title,
 	                desc: _desc,
 	                boxId: boxId
 	            }, function (data) {
-	                console.log(data);
+	                if (data.access == "forbid") {
+	                    location.href = "#/login";
+	                } else {
+	                    if (boxId != 0) {
+	                        data.imgData = This.state.boxDataOne.imgData;
+	                    } else {
+	                        data.imgData = [];
+	                    }
+	
+	                    This.setState({
+	                        boxDataOne: data
+	                    });
+	
+	                    if (boxId != 0) {
+	                        alert("修改成功");
+	                    } else {
+	                        alert("添加成功");
+	                    }
+	                }
+	            });
+	        }
+	    }, {
+	        key: "deleteBox",
+	        value: function deleteBox(e) {
+	            var boxId = e.target.getAttribute('data-id');
+	            var This = this;
+	            _jquery2["default"].post(IP_ADDRESS + "/access/deleteBoxData", {
+	                boxId: boxId
+	            }, function (data) {
+	                if (data.access == "forbid") {
+	                    location.href = "#/login";
+	                } else {
+	                    if (data.type == "error") {
+	                        alert("删除失败");
+	                    } else {
+	                        alert("删除成功");
+	                        This.state.boxDataOne["delete"] = true;
+	                        This.setState({
+	                            boxDataOne: This.state.boxDataOne
+	                        });
+	                    }
+	                }
 	            });
 	        }
 	    }, {
@@ -38895,7 +38941,12 @@
 	        value: function render() {
 	            return _react2["default"].createElement(
 	                "div",
-	                { className: "box-one-obj-div" },
+	                { className: "box-one-obj-div", style: { display: this.state.boxDataOne["delete"] ? "none" : "block" } },
+	                this.state.boxDataOne.id != 0 ? _react2["default"].createElement(
+	                    "div",
+	                    { className: "delete-box", onClick: this.deleteBox.bind(this), "data-id": this.state.boxDataOne.id },
+	                    "删除"
+	                ) : '',
 	                _react2["default"].createElement(
 	                    "div",
 	                    { className: "title-line-div" },
@@ -38956,11 +39007,9 @@
 	        result = void 0;
 	    var length = fakeArr.length || 0;
 	
-	    console.log(length);
 	    for (i = 0; i < length; i++) {
 	        item = fakeArr[i];
 	        result = fn.call(fakeArr, item, i);
-	        console.log(result);
 	        if (result === false) {
 	            break;
 	        }
@@ -39011,7 +39060,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".box-one-obj-div{\r\n    border:1px solid #cccccc;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    width: 30%;\r\n    margin:10px;\r\n}\r\n.img-box-content-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 10px 0;\r\n    box-sizing: border-box;\r\n    justify-content: space-between;\r\n}\r\n.box-img-one-div{\r\n    width:30%;\r\n}\r\n.box-img-one-div img{\r\n    width: 100%;\r\n    margin-bottom: 4px;\r\n}\r\n.img-box-title-input{\r\n    width: 100%;\r\n    padding: 0 10px;\r\n    height: 30px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    border: 1px solid #cccccc;\r\n}\r\n.img-box-desc-text-area{\r\n    width:100%;\r\n    height:140px;\r\n    resize:none;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    font-size:12px;\r\n}\r\n.label-text-p{\r\n    font-size: 14px;\r\n    line-height: 30px;\r\n}\r\n\r\n.modify-img-box-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color: #fd4733;\r\n    line-height: 40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    margin-top: 20px;\r\n}\r\n.modify-img-box-button:hover{\r\n    background-color: white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.add-img-outer{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border:1px solid #cccccc;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.add-img-outer:hover span{\r\n    color: #333333;\r\n}\r\n.add-img-span{\r\n    line-height: 100%;\r\n    text-align:center;\r\n    font-size: 40px;\r\n    color: #cccccc;\r\n}", ""]);
+	exports.push([module.id, ".box-one-obj-div{\r\n    border:1px solid #cccccc;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    width: 30%;\r\n    margin:10px;\r\n}\r\n.img-box-content-div{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    padding: 10px 0;\r\n    box-sizing: border-box;\r\n    justify-content: space-between;\r\n}\r\n.box-img-one-div{\r\n    width:30%;\r\n}\r\n.box-img-one-div img{\r\n    width: 100%;\r\n    margin-bottom: 4px;\r\n}\r\n.img-box-title-input{\r\n    width: 100%;\r\n    padding: 0 10px;\r\n    height: 30px;\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    border: 1px solid #cccccc;\r\n}\r\n.img-box-desc-text-area{\r\n    width:100%;\r\n    height:140px;\r\n    resize:none;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n    border: 1px solid #cccccc;\r\n    font-size:12px;\r\n}\r\n.label-text-p{\r\n    font-size: 14px;\r\n    line-height: 30px;\r\n}\r\n\r\n.modify-img-box-button{\r\n    height: 40px;\r\n    width: 220px;\r\n    color: white;\r\n    background-color: #fd4733;\r\n    line-height: 40px;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    margin-top: 20px;\r\n}\r\n.modify-img-box-button:hover{\r\n    background-color: white;\r\n    color: #fd4733;\r\n    border: 1px solid #fd4733;\r\n}\r\n.add-img-outer{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border:1px solid #cccccc;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.add-img-outer:hover span{\r\n    color: #333333;\r\n}\r\n.add-img-span{\r\n    line-height: 100%;\r\n    text-align:center;\r\n    font-size: 40px;\r\n    color: #cccccc;\r\n}\r\n\r\n.delete-box{\r\n    float:right;\r\n    cursor:pointer;\r\n}\r\n.delete-box:hover{\r\n    color: #fd4733;\r\n}\r\n", ""]);
 	
 	// exports
 
@@ -39071,26 +39120,6 @@
 	
 	        _get(Object.getPrototypeOf(UpLoadImg.prototype), "constructor", this).call(this);
 	
-	        this.data = {
-	            imgArray: [{
-	                id: 1,
-	                date: "2018-05-24",
-	                title: "巴黎是艺术家的圣地",
-	                desc: "巴黎一直以来都是一个时尚胜地，无数的时尚达人在这里汇聚，讨论着下一季整个世界的流行趋势。那是什么让巴黎有那么多的时尚达人呢，就是因为巴黎的文化底蕴给了人们很多的灵感。谁说一定要去看埃菲尔铁塔和凯旋门，在巴黎来次博物馆之旅也不错啊～",
-	                imgData: ['http://dingyue.nosdn.127.net/0N1bQ8k3LIM41XnDXzPIpsNOfGExYKOSTp7Zse6YyUywO1496481577019compressflag.jpg', 'http://dingyue.nosdn.127.net/Fru5YnVK=CzN4Qb3Bw6AHZ3755OF8n5WPJFiYrM8cn7D=1496481577020compressflag.jpg', 'http://dingyue.nosdn.127.net/FQlQXpjVePhAF3r14mTILENNJcinrX8fZY5HYJZyJrcdb1496481577020.jpg', 'http://dingyue.nosdn.127.net/8sAT=UBn2Id5YA=EpN1lDr4oySsKKOGhcjQA20mF8Pm2V1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/76QsIsLP3m5mam1qKbfkSKUfeM2MXTOwXdQRahKkQfc1W1496481577021compressflag.jpg', 'http://dingyue.nosdn.127.net/IxjWbBiuq4PuwCcRP85HYBUHGQcWgW8vFy8J81reDOlzj1496481577022compressflag.png', 'http://dingyue.nosdn.127.net/EoCMZ59uStWgnxURUEM6rKYPmwog62qMz5bJL7G5FmLnJ1496481577022compressflag.jpg']
-	            }, {
-	                id: 2,
-	                date: "2018-05-22",
-	                title: "走进活色生香的中央巴刹",
-	                desc: "  每到一个城市，除了这个城市的风景，最能体现当地老百姓生活的，当属当地的菜市场，一方水土，一方菜式，一方人情，在这个五味杂陈的地方，新鲜的蔬果、生鲜，熟悉或陌生的农夫口音，总觉得在他们嘴里说出来的生活更生动更直接，也更能打动我。所以要想了解当地人的生活，菜市场是一定要来逛一逛走一走的。",
-	                imgData: ['http://img2.ph.126.net/c8rjvOXl6yCxMbjpaK2P1A==/6632601584420614763.jpg', 'http://img0.ph.126.net/iPxiBLT2ctppmPjl_y3wVg==/6632332204071813717.jpg', 'http://img0.ph.126.net/FNuB3vR4m28ZPplNTWde1Q==/6632084813958232902.jpg', 'http://img0.ph.126.net/sG4qcRyc-QJb1eoIMtr6iQ==/6632497130815972269.jpg', 'http://img0.ph.126.net/ak3SKi7S4p6eSIxP7KY2dg==/6632188168051240644.jpg', 'http://img2.ph.126.net/jwteUaRKbrNXyTEG3kPHiA==/6632455349374119269.jpg', 'http://img1.ph.126.net/A6TFUEwIFOkvtxXwvB_Cug==/6632045231539636627.jpg']
-	            }]
-	        };
-	
-	        this.state = {
-	            imgDataV: this.data.imgArray
-	        };
-	
 	        this.emptyData = {
 	            id: 0,
 	            date: "",
@@ -39099,14 +39128,29 @@
 	            imgData: []
 	        };
 	
-	        var boxData = this.getBoxData();
+	        this.getBoxData();
+	
+	        this.state = {
+	            imgDataV: []
+	        };
 	    }
 	
 	    _createClass(UpLoadImg, [{
 	        key: "getBoxData",
 	        value: function getBoxData() {
-	            _jquery2["default"].post(IP_ADDRESS + '/getBoxData', {}, function (data) {
-	                console.log(data);
+	            var This = this;
+	            _jquery2["default"].post(IP_ADDRESS + '/access/getBoxData', {}, function (data) {
+	                if (data == "error") {
+	                    alert("系统错误");
+	                } else {
+	                    if (data.access == "forbid") {
+	                        location.href = "#/login";
+	                    } else {
+	                        This.setState({
+	                            imgDataV: data
+	                        });
+	                    }
+	                }
 	            });
 	        }
 	    }, {
@@ -39122,10 +39166,10 @@
 	                    _react2["default"].createElement(
 	                        "div",
 	                        { className: "img-box-container-div" },
+	                        _react2["default"].createElement(_commonJsUpLoadImgImgBox2["default"], { imgData: this.emptyData }),
 	                        this.state.imgDataV.map(function (imgDataV, index) {
 	                            return _react2["default"].createElement(_commonJsUpLoadImgImgBox2["default"], { imgData: imgDataV, key: index });
-	                        }),
-	                        _react2["default"].createElement(_commonJsUpLoadImgImgBox2["default"], { imgData: this.emptyData })
+	                        })
 	                    )
 	                ),
 	                _react2["default"].createElement("input", { type: "file", className: "input-file-style" }),

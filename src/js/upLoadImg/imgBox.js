@@ -72,19 +72,22 @@ class ImgBox extends Component{
             formdata.append('boxId',boxId);
 
             $.ajax({
-                url:IP_ADDRESS+"/upLoadImg",
+                url:IP_ADDRESS+"/access/upLoadImg",
                 method:"Post",
                 contentType: false, // 注意这里应设为false
                 processData: false,
                 data:formdata,
                 success:function (data) {
+                    if(data.access == "forbid"){
+                        location.href = "#/login";
+                    }else {
+                        var imgDataArray = This.state.boxDataOne;
+                        imgDataArray.imgData.push(data.data[0]);
 
-                    var imgDataArray = This.state.boxDataOne;
-                    imgDataArray.imgData.push(data.data[0]);
-
-                    This.setState({
-                        boxDataOne:imgDataArray
-                    });
+                        This.setState({
+                            boxDataOne: imgDataArray
+                        });
+                    }
                 },
                 error:function (err) {
                     console.log(err)
@@ -101,10 +104,12 @@ class ImgBox extends Component{
     }
 
     saveBoxTitleAndDesc(e){
+
+        var This = this;
+
         var _title = this.refs.titleText.value;
         var _desc = this.refs.boxDesc.value;
         var boxId = e.target.getAttribute('data-id');
-        console.log(_title+"--"+_desc+"--"+boxId);
 
         if(_title == "" || _title == " "){
             alert("标题不能为空");
@@ -116,18 +121,62 @@ class ImgBox extends Component{
             return false;
         }
 
-        $.post(IP_ADDRESS+"/operatingBoxText",{
+        $.post(IP_ADDRESS+"/access/operatingBoxText",{
             title:_title,
             desc:_desc,
             boxId:boxId
         },function (data) {
-            console.log(data);
+            if(data.access == "forbid"){
+                location.href = "#/login";
+            }else {
+                if (boxId != 0) {
+                    data.imgData = This.state.boxDataOne.imgData;
+                } else {
+                    data.imgData = [];
+                }
+
+                This.setState({
+                    boxDataOne: data
+                });
+
+                if (boxId != 0) {
+                    alert("修改成功");
+                } else {
+                    alert("添加成功");
+                }
+            }
         });
 
     }
 
+    deleteBox(e){
+        var boxId = e.target.getAttribute('data-id');
+        var This = this;
+        $.post(IP_ADDRESS+"/access/deleteBoxData",{
+            boxId:boxId,
+        },function (data) {
+            if(data.access == "forbid"){
+                location.href = "#/login";
+            }else {
+                if (data.type == "error") {
+                    alert("删除失败");
+                } else {
+                    alert("删除成功");
+                    This.state.boxDataOne.delete = true;
+                    This.setState({
+                        boxDataOne: This.state.boxDataOne
+                    });
+                }
+            }
+        });
+    }
+
     render(){
-        return (<div className="box-one-obj-div">
+        return (<div className="box-one-obj-div" style={{display:this.state.boxDataOne.delete?"none":"block"}}>
+            {
+                this.state.boxDataOne.id!=0?<div className="delete-box" onClick={this.deleteBox.bind(this)} data-id={this.state.boxDataOne.id} >删除</div>:
+                   ''
+            }
             <div className="title-line-div">
                 <p className="label-text-p">标题：</p>
                 <input type="text" ref="titleText" className="img-box-title-input" defaultValue={this.state.boxDataOne?this.state.boxDataOne.title:""}></input>
@@ -170,11 +219,9 @@ function arrForEach(fakeArr, fn) {
         result = void 0;
     var length = fakeArr.length || 0;
 
-    console.log(length)
     for (i = 0; i < length; i++) {
         item = fakeArr[i];
         result = fn.call(fakeArr, item, i);
-        console.log(result)
         if (result === false) {
             break;
         }
